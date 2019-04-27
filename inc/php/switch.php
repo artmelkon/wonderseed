@@ -91,7 +91,7 @@
             $PAGE_TITLE = 'Donate';
             $TITLE = 'support us';
             $SUBTITLE = 'help shape the future';
-            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
+            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link rel="stylesheet" href="./css/donate.css">';
             $BACKGROUND = '<div class="background"></div>';
             class Box {
                 public function __construct($icon, $title, $item, $url, $btn) {
@@ -103,7 +103,7 @@
                 }
 
                 public function boxDonate() {
-                    $dop = '<div class="box-column-wrapper">';
+                    $dop = '<div class="donate box-column-wrapper">';
                     $dop .= '<div class="icons">'.$this->icon.'</div>';
                     $dop .= '<h3 class="title uppercase center">'.$this->title.'</h3>';
                     $dop .= '<p class="box-column-description text2 center">'.$this->item.'</p>';

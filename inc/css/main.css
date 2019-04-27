@@ -452,8 +452,6 @@ img.brain {
 .box-column-wrapper {
   display: flex;
   flex-flow: column nowrap;
-  width: 215px;
-  height:321px;
   border-radius: 8px;
   margin: 8px auto;
   padding: 15px 0;
@@ -569,6 +567,10 @@ img.brain {
     background-size: 50%;
     background-repeat: no-repeat;
     height:auto;
+  }
+
+  .box-column-wrapper {
+    margin-bottom: 30px;
   }
 }
 
