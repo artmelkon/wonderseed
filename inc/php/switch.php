@@ -4,7 +4,7 @@
             $PAGE_TITLE = 'Gamification of Education';
             $TITLE = 'Gamification of Education';
             $BACKGROUND = '<div class="background"></div>';
-            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
+            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./css/gamification.css" rel="stylesheet">';
             $PARAGRAPH = (object) [
                 'copy1' => (object) ['title' => 'VIRTUAL REALITY', 'item1' => 'Virtual Reality allows our children to “learn by doing” which promotes sensory recall, memory and critical thinking.', 'item2' => 'Virtual Reality is a powerful tool to teach empathy', 'img1' => '../img/hmd-4140960_640.jpg', 'item3' => 'is substantially more fun and engaging than traditional methods', 'img2' => '../img/vr-3483928_640.jpg', 'item4' => 'allows the neurotransmitters to send signals between neurons', 'img3' => '../img/virtual-reality-3368729_640.jpg', 'item5' => 'releases endorphins which improves retention of information'],
                 'copy2' => (object) ['title' => 'How it Works', 'item1' => '
@@ -31,6 +31,10 @@
                     $this->img = $img;
                     $this->str1 = $str1;
                     $this->str2 = $str2;
+                }
+
+                public function boxGamification() {
+                    $op = '<div class="box-container"></div>';
                 }
             }
             

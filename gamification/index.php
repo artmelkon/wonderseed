@@ -14,17 +14,20 @@ ob_start();
         <p class="center"><?php echo $PARAGRAPH->copy1->item1; ?></p>
         <p class="center"><?php echo $PARAGRAPH->copy1->item2; ?></p>
         <div class="box-wrapper">
-            <div>
+            <div class="gamification box-container">
                 <img src="<?php echo $PARAGRAPH->copy1->img1; ?>" />
-                <span class="text2"><?php echo $PARAGRAPH->copy1->item3; ?></span>
+                <div class="leyer"></div>
+                <div class="gm-text text2"><?php echo $PARAGRAPH->copy1->item3; ?></div>
             </div>
-            <div>
+            <div class="gamification box-container">
                 <img src="<?php echo $PARAGRAPH->copy1->img2; ?>" />
-                <span class="text2"><?php echo $PARAGRAPH->copy1->item4; ?></span>
+                <div class="leyer"></div>
+                <div class="gm-text text2"><?php echo $PARAGRAPH->copy1->item4; ?></div>
             </div>
-            <div>
+            <div class="gamification box-container">
                 <img src="<?php echo $PARAGRAPH->copy1->img3; ?>" />
-                <span class="text2"><?php echo $PARAGRAPH->copy1->item5; ?></span>
+                <div class="leyer"></div>
+                <div class="gm-text text2"><?php echo $PARAGRAPH->copy1->item5; ?></div>
             </div>            
         </div>
     </div>
