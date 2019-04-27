@@ -1,0 +1,16 @@
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.52;
+    background-image: linear-gradient(rgba(0, 70, 0, 0.7),
+    rgba(0, 70, 0, 0.1)), url("../../img/milky-way.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+

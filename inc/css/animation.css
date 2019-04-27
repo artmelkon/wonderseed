@@ -1,0 +1,23 @@
+.animation-cnt {
+    margin: 15px auto;
+    border: 2px solid red;
+}
+
+.animation-box {
+    width:250px;
+    height: 250px;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+
+
+.circle {
+    position: relative;
+    display: block;
+    text-align: center;
+    line-height: 75px;
+    width: 75px;
+    height: 75px;
+    background-color: #ccc;
+    border: 2px dashed blueviolet;
+}
