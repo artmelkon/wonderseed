@@ -14,26 +14,29 @@ ob_start();
         <p class="center"><?php echo $PARAGRAPH->copy1->item1; ?></p>
         <p class="center"><?php echo $PARAGRAPH->copy1->item2; ?></p>
         <div class="box-wrapper">
-            <div class="gamification box-container">
-                <img src="<?php echo $PARAGRAPH->copy1->img1; ?>" />
-                <div class="leyer"></div>
-                <div class="gm-text text2"><?php echo $PARAGRAPH->copy1->item3; ?></div>
-            </div>
-            <div class="gamification box-container">
-                <img src="<?php echo $PARAGRAPH->copy1->img2; ?>" />
-                <div class="leyer"></div>
-                <div class="gm-text text2"><?php echo $PARAGRAPH->copy1->item4; ?></div>
-            </div>
-            <div class="gamification box-container">
-                <img src="<?php echo $PARAGRAPH->copy1->img3; ?>" />
-                <div class="leyer"></div>
-                <div class="gm-text text2"><?php echo $PARAGRAPH->copy1->item5; ?></div>
-            </div>            
+            <?php
+                foreach($gamification as $val) {
+                    $val->boxGamification();
+                }
+            ?>
         </div>
     </div>
     <div class="container">
         <h2 class="title uppercase center"><?php echo $PARAGRAPH->copy2->title; ?></h2>
         <?php echo $PARAGRAPH->copy2->item1; ?>
+    </div>
+    <div class="container">
+        <h2 class="title uppercase center"><?php echo $PARAGRAPH->copy3->title; ?></h2>
+        <div class="vr box-wrapper">
+            <div>
+                <img src="<?php echo $PARAGRAPH->copy3->img; ?>">
+            </div>
+            <div>                
+                <?php echo $PARAGRAPH->copy3->item1; ?>
+            </div>
+        </div>
+    </div>
+
     </div>
 </section>
 

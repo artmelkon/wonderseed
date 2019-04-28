@@ -27,28 +27,28 @@ ob_start();
         </h2>
     </div>
     <div class="container">
-        <div class="storytelling-container">
+        <div class="box-wrapper">
             <div class="cols-lt">
-                <div class="box-column-wrapper">
+                <div class="storytelling box-column-wrapper">
                     <?php //echo $STORY->story1->icon; ?>
                     <h3 class="uppercase title center"><?php echo $STORY->story1->title; ?></h3>
                     <p><?php echo $STORY->story1->text; ?></p>
                 </div>
-                <div class="box-column-wrapper">
+                <div class="storytelling box-column-wrapper">
                     <img src="">
                     <h3 class="uppercase title center"><?php echo $STORY->story2->title; ?></h3>
                     <p><?php echo $STORY->story2->text; ?></p>
                 </div>
             </div>
             <div class="cols-rt">
-                <div class="box-column-wrapper">
+                <div class="storytelling box-column-wrapper">
                     <img src="">
                     <h3 class="title uppercase center"><?php echo $STORY->story3->title; ?></h3>
                     <p><?php echo $STORY->story2->text; ?></p>
                 </div>
-                <div class="box-column-wrapper title">
+                <div class="storytelling box-column-wrapper">
                     <img src="">
-                    <h3 class="uppercase center"><?php echo $STORY->story4->title; ?></h3>
+                    <h3 class="title uppercase center"><?php echo $STORY->story4->title; ?></h3>
                     <p><?php echo $STORY->story2->text; ?></p>
                 </div>
             </div>

@@ -6,7 +6,7 @@
             $BACKGROUND = '<div class="background"></div>';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./css/gamification.css" rel="stylesheet">';
             $PARAGRAPH = (object) [
-                'copy1' => (object) ['title' => 'VIRTUAL REALITY', 'item1' => 'Virtual Reality allows our children to “learn by doing” which promotes sensory recall, memory and critical thinking.', 'item2' => 'Virtual Reality is a powerful tool to teach empathy', 'img1' => '../img/hmd-4140960_640.jpg', 'item3' => 'is substantially more fun and engaging than traditional methods', 'img2' => '../img/vr-3483928_640.jpg', 'item4' => 'allows the neurotransmitters to send signals between neurons', 'img3' => '../img/virtual-reality-3368729_640.jpg', 'item5' => 'releases endorphins which improves retention of information'],
+                'copy1' => (object) ['title' => 'VIRTUAL REALITY', 'item1' => 'Virtual Reality allows our children to “learn by doing” which promotes sensory recall, memory and critical thinking.', 'item2' => 'Virtual Reality is a powerful tool to teach empathy'],
                 'copy2' => (object) ['title' => 'How it Works', 'item1' => '
                 <p class="text2">Participants work through ten choice-driven VRCs (Virtual
                 Reality Checks), each choice leading to another. They are
@@ -24,8 +24,16 @@
                 the lessons they have learned over the previous 30 days.
                 They are scored and their scores are compared to their
                 original to see how much progress they have made.
-                </p>']
+                </p>'],
+                'copy3' => (object) ['title' => 'BENEFIT OF VR', 'item1' => '<p>VR has a positive effect on students’ knowledge, attitudes, self-efficacy and behavioral intentions.</p>
+
+                <p>VR allows researchers to immerse students into environments of alcohol/drug consumption and risk-taking, without the physical dangers that these behaviors may lead to in real life.</p>
+                
+                <p>VR can simulate a ‘learning by doing’ approach, for sensitive topics and illegal behaviors, which could otherwise not be brought into classrooms.<p>
+                
+                <p>VR offers the potential to build learning experiences that transcend conventional information delivery methods.</p>', 'img' =>'../img/hmd-4140960_640.jpg']
             ];
+            
             class Box {
                 public function __construct($img, $str1, $str2) {
                     $this->img = $img;
@@ -34,10 +42,20 @@
                 }
 
                 public function boxGamification() {
-                    $op = '<div class="box-container"></div>';
+                    $dop = '<div class="gamification box-column-wrapper">';
+                    $dop .= '<img src="'.$this->img.'" />';
+                    $dop .= '<div class="leyer"></div>';
+                    $dop .= '<div class="gm-text text2">'.$this->str1.'</div>
+                </div>';
+                    echo $dop;
                 }
             }
-            
+
+            $gamification = array(
+                new Box('../img/hmd-4140960_640.jpg', 'is substantially more fun and engaging than traditional methods', ''),
+                new Box('../img/vr-3483928_640.jpg', 'allows the neurotransmitters to send signals between neurons', ''),
+                new Box('../img/virtual-reality-3368729_640.jpg', 'releases endorphins which improves retention of information', '')
+            );            
             break;
         case '/right-choice/index.php':
             $PAGE_TITLE ='The Right Choice Campaign';
@@ -57,7 +75,7 @@
             $TITLE = 'The Power of Storytelling';
             $SUBTITLE = 'How The Power of Storytelling Works';
             $BACKGROUND = '<div class="background"></div>';
-            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
+            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link rel="stylesheet" href="./css/storytelling.css">';
             $PARAGRAPH = (object) [
                 'copy1' => (object) ['subtitle' =>'', 'image' => '../img/book.png', 'text' => 'Evidence based research has shown that the effects of Storytelling has proven substantial impacts on our brains and is vital to the conversion process. It is the most effective way to stimulate the sensory cortex and a special class of mirror neurons in our brains causing lasting change when reinforced through repetition.          
                 <p>Stories are the root of our ability to communicate and understand what’s going on around us and is a very powerful mnemonic device that has lasting effect on our memory and understanding. Storytelling has also been proven to improve children’s overall mental development and shown to improve narrative recall, problem solving, increase literacy, facilitate abstract thinking, self-regulation and boost linguistic abilities.</p>'],
@@ -108,7 +126,6 @@
                     $dop .= '<h3 class="title uppercase center">'.$this->title.'</h3>';
                     $dop .= '<p class="box-column-description text2 center">'.$this->item.'</p>';
                     $dop .= '<div class="btn-container uppercase center hd4"><a href="'.$this->url.'" target="_blank" class="btn">'.$this->btn.'</a></div></div>';
-
                     echo $dop;
                 }
             }
@@ -121,8 +138,6 @@
                 4 => new Box('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-bag" class="icon icon-sm" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M352 160v-32C352 57.42 294.579 0 224 0 153.42 0 96 57.42 96 128v32H0v272c0 44.183 35.817 80 80 80h288c44.183 0 80-35.817 80-80V160h-96zm-192-32c0-35.29 28.71-64 64-64s64 28.71 64 64v32H160v-32zm160 120c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zm-192 0c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24z"></path></svg>','shop', 'coming soon', '#', 'shop now'),
                 5 => new Box('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="seedling" class="icon icon-sm" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 96H0c0 123.7 100.3 224 224 224v144c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V320C288 196.3 187.7 96 64 96zm384-64c-84.2 0-157.4 46.5-195.7 115.2 27.7 30.2 48.2 66.9 59 107.6C424 243.1 512 147.9 512 32h-64z"></path></svg>','giving 360', 'Out unique program to that allows us to  give back to you as you empower our mission.', '#', 'let\'s talk')
                 );
-                $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
-
             break;
         case '/emotional-intelligence/index.php':
             $PAGE_TITLE = 'what is emotional intelligence';

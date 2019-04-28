@@ -11,7 +11,7 @@ ob_start();
             <p class="title uppercase center hd3"><?php echo $SUBTITLE; ?></P>
     </div>
     <div class="container" style="margin-top: 12px;">
-        <div class="donate box-wrapper">
+        <div class="box-wrapper">
         <?php 
             foreach($donate as $val) {
                 $val->boxDonate();

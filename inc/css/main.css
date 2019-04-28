@@ -422,7 +422,7 @@ img.brain {
   flex-flow: row wrap;
   justify-content: space-around;
   width: 100%;
-  border: 2px solid red;
+  margin: 30px 0;
 }
 
 .ie.circle {
@@ -439,15 +439,6 @@ img.brain {
 .ie.circle:hover {
   background-color: #3e853e;
 }
-
-.box-container, .storytelling-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  width: 100%;
-  border: 2px solid red;
-}
-
 
 .box-column-wrapper {
   display: flex;
@@ -497,7 +488,7 @@ img.brain {
   }
 
   .container {
-    width: 760px;
+    width: 860px;
     margin: 0 auto;
   }
 
@@ -561,16 +552,9 @@ img.brain {
     flex-flow: row nowrap;
   }
 
-  .storytelling-container {
-    background-image: url("../../img/puzzle-brain.png");
-    background-position: center;
-    background-size: 50%;
-    background-repeat: no-repeat;
-    height:auto;
-  }
 
   .box-column-wrapper {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
 }
 

@@ -2,6 +2,7 @@
   display: flex;
   margin: 10px;
   position: relative;
+  width: 265px;
 }
 
 .leyer {
@@ -11,7 +12,8 @@
   width: 100%;
   height: 100%;
   display:block;
-  background-image: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5))
+  background-image: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5));
+  border-radius: 8px;
 }
 
 .gm-text {
@@ -20,4 +22,32 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 85%;
+}
+
+
+.vr.box-wrapper div:nth-child(1) {
+  padding-top: 17px;
+}
+
+.vr.box-wrapper div:nth-child(2) {
+  padding-left: 12px;
+}
+
+.vr.box-wrapper div:nth-child(1), .vr.box-wrapper div:nth-child(2) {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .vr.box-wrapper {
+    flex-direction: row;
+  }
+
+  .vr.box-wrapper div:nth-child(1){
+    width: 40%;
+  } 
+  
+  .vr.box-wrapper div:nth-child(2) {
+    width: 60%;
+  }
 }
