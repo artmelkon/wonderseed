@@ -206,7 +206,7 @@
                 }
             }
             
-            $advisory = array(
+            $advisory = [
                 0 => new Advisory('Chris Christian', 'Managing Partner at WNBA Dallas Wings, Grammy award winning songwriter and producer'),
                 1 => new Advisory('Taylor Weyeneth', 'Managing Director of 20k Strategies, Executive Director of End the Stigma PAC, Former Deputy Chief of Staff, Executive Office of the President-White House Drug Policy Office'),
                 2 => new Advisory('Paul Miller', 'Manager at Logic 20/20, Former program officer at Bill and Melinda Gates Foundation, Former Senior Advisor and Program Policy Development Specialist for Los Angeles Unified School District'),
@@ -226,7 +226,7 @@
                 16 => new Advisory('Sandeep Kumar', 'Managing Partner at Global Ascent Partners, Executive Director at DiscoverSTEAM Foundation'),
                 17 => new Advisory('Jose Osuna', 'Chief Mission Officer, The Meaning Foundation, Probation Ov'),
                 18 => new Advisory('Frank Jansen', 'Senior Vice President at Chicago Title')
-            );
+            ];
             $BACKGROUND = '<div class="background"></div>';
             break;
         case '/who-we-are/index.php':
@@ -248,7 +248,34 @@
             $TITLE = 'the wonderseed foundation';
             $INFO_TEXT = '“Children are our most valuable resource and its best hope for the future” &nbsp;&nbsp;&lt;i&gt;-John&nbsp;F.&nbsp;Kennedy&lt;/i&gt;';
             $BACKGROUND = '<div id="particles-js"></div>';
-            $CSS_PATH = '<link rel="stylesheet" href="./inc/css/particles.css">';
+            $CSS_PATH = '<link rel="stylesheet" href="./inc/css/particles.css"><link rel="stylesheet" href="./index.css">';
+            class Box {
+                public function __construct($icon, $title, $list) {
+                    $this->icon = $icon;
+                    $this->title = $title;
+                    $this->list = $list;
+                }
+
+                public function makeBox() {
+                    $dop = '<div class="home box-column-wraper">';
+                    $dop .= '<img src="">';
+                    $dop .= '<h3 class="title capitalize center">'.$this->title.'</h3>';
+                    $dop .= '<ul style="list-style-type: initial !important;">';
+                    foreach($this->list as $val) {
+                        $dop .= '<li class="text2 capitalize">'.$val.'</li>';
+                    }
+                    $dop .= '</ul></div>';
+                    echo $dop;
+                }
+            }
+            $intelligence = [
+                new Box('', 'Self Awareness', ['Identifying ones emotions', 'Accurate Self- perception', 'Recognizing strengths and limitations', 'Self- confidence', 'elf-efficacy']),
+                new Box('', 'Self-Management', ['Impulse contro', 'Stress-management ', 'Self-discipline', 'Self-Motivation', 'Goal-setting', 'Organizational skills']),
+                new Box('', 'Social Awareness', ['Empathy', 'Respect for Others', 'Perspective taking', 'Appreciate diversity']),
+                new Box('', 'Relationship Skills', ['Communication and Active listening', 'Social Engagement', 'Relationship-building', 'Teamwork']),
+                new Box('', 'Responsible Decision-making', ['Identifying problems', 'Analyzing situations', 'Problem solving', 'Evaluating', 'Reflecting and mindfulness', 'Ethical responsibility'])
+            ];
+            $ARR_COUNT = 5;
             break;
         default:
             $TUB_TITLE = 'Welcome';

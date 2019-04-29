@@ -13,7 +13,18 @@ ob_start();
     <div class="container">
         <div id='introAnimation' class='intro-container text2'><?php echo $INFO_TEXT; ?></div>
     </div>
-</div>
+</section>
+<section>
+    <div class="container">
+        <div class="box-wrapper">
+            <?php
+                foreach($intelligence as $val) {
+                    echo $val->makeBox();
+                }
+            ?>
+        </div>
+    </div>
+</section>
 <script src='https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js'></script>
     <script>
         particlesJS.load('particles-js',

@@ -1,0 +1,14 @@
+.home.box-column-wraper {
+  width: 255px;
+  height: auto;
+  outline: 2px solid #fff;
+  margin: 18px 12px;
+}
+
+.home ul {
+  display: block;
+  padding: 18px;
+}
+.home ul li {
+  line-height: 1em;
+}

@@ -1,6 +1,8 @@
 {
 	"folders": [
 		{
+			//Source Code
+			"name": "WonderSeed",
 			"path": "."
 		}
 	],
