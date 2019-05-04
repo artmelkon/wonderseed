@@ -1,5 +1,5 @@
 #particles-js {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -11,6 +11,6 @@
     rgba(0, 70, 0, 0.1)), url("../../img/milky-way.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: -1;
+    z-index: -999;
   }
 

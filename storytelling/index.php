@@ -6,15 +6,15 @@ include_once '../inc/php/switch.php';
 
 ob_start();
 ?>
-<section>
-    <div class="container">
-        <h1 class="title uppercase center">
-            <?php echo $TITLE; ?>
-        </h1>
-        <div class="paragraph text2">
-            <img src="<?php  echo $PARAGRAPH->copy1->image; ?>" style="width:50%; padding-right: 15px;" align="left" />
-            <?php echo $PARAGRAPH->copy1->text; ?>
-        </div>
+<section class="container">
+    <h1 class="title uppercase center">
+        <?php echo $TITLE; ?>
+    </h1>
+    <div class="paragraph text-md">
+        <img src="<?php  echo $PARAGRAPH->copy1->image; ?>" style="width:50%; padding-right: 15px;" align="left" />
+        <!-- paragraph goes here -->
+        <?php echo $PARAGRAPH->copy1->text; ?>
+        <!-- end of paragraph -->
     </div>
 </section>
 <section style="width: 100%; height: 45px;">

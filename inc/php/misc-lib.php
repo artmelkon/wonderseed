@@ -1,31 +1,32 @@
 <?php
+
+		if($page === '/index.php') {
+			$root = '.';
+		} else {
+			$root = '..';
+		}
 	
-    if($page === '/index.php') {
-		$root = './inc/php/';
-		$root_css = './inc/css/';
-		$root_js = './inc/js/';
-		$root_img = './img/';
-	} else {
-		$root = '../inc/php/';
-		$root_css = '../inc/css/';
-		$root_js = '../inc/js/';
-		$root_img = '../img/';
-	}
+		$root_php = $root.'/inc/php/';
+		$root_php_components = $root.'/inc/php/components/';
+		$root_css = $root.'/inc/css/';
+		$root_js = $root.'/inc/js/';
+		$root_img = $root.'/img/';
 	
-	$file_top_nav = $root.'top-nav.php';
-	$file_mobile_nav = $root.'mobile-nav.php';
+	
+	$file_top_nav = $root_php.'top-nav.php';
+	$file_mobile_nav = $root_php.'mobile-nav.php';
 	$file_main_css = $root_css.'main.css';
-	$file_title_section = $root.'title-section.php';
-	$file_content = $root.'content.php';
+	$file_title_section = $root_php.'title-section.php';
+	$file_content = $root_php.'content.php';
 	$file_functions_js = $root_js.'script.js';
-	$file_header_tag = $root.'header-tag.php';
-	$file_menu = $root.'menu.php';
-	$file_section_one = $root.'section-one.php';
-	$file_section_two = $root.'section-two.php';
-	$file_sub_anime = $root.'sub-anim.php';
-	$file_board_members = $root.'board-members.php';
+	$file_header_tag = $root_php.'header-tag.php';
+	$file_menu = $root_php_components.'menu.php';
+	$file_section_one = $root_php.'section-one.php';
+	$file_section_two = $root_php.'section-two.php';
+	$file_sub_anime = $root_php.'sub-anim.php';
+	$file_board_members = $root_php.'board-members.php';
 	$file_team_lib = $root_js.'team-member-lib.js';
-	$file_content_center = $root.'content-center.php';
+	$file_content_center = $root_php.'content-center.php';
 	$file_animations_js = $root_js.'animations.js';
 	$file_emotional_intelligence_js = $root_js.'emotional-intelligence.js';
 	$file_favicon = $root_img.'favicon.png';

@@ -1,6 +1,8 @@
 <?php
-    switch ($page) {
-        case '/gamification/index.php';
+$uriPage = basename($_SERVER['REQUEST_URI']);
+
+    switch ($uriPage) {
+        case 'gamification';
             $PAGE_TITLE = 'Gamification of Education';
             $TITLE = 'Gamification of Education';
             $BACKGROUND = '<div class="background"></div>';
@@ -57,7 +59,7 @@
                 new Box('../img/virtual-reality-3368729_640.jpg', 'releases endorphins which improves retention of information', '')
             );            
             break;
-        case '/right-choice/index.php':
+        case 'right-choice':
             $PAGE_TITLE ='The Right Choice Campaign';
             $TITLE = 'the right choice campaine';
             $SUBTITLE = 'Helping Kids Make The Right Choice';
@@ -70,14 +72,14 @@
              
             <p style="color: #FBDC2D;">Our AI technology allows for prevention, early intervention and the ability to measure impact while enabling us to continue to improve upon how we can best help our children in the way they need it most.”</p>';
             break;
-        case '/storytelling/index.php':
+        case 'storytelling':
             $PAGE_TITLE = 'Storytelling';
             $TITLE = 'The Power of Storytelling';
             $SUBTITLE = 'How The Power of Storytelling Works';
             $BACKGROUND = '<div class="background"></div>';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link rel="stylesheet" href="./css/storytelling.css">';
             $PARAGRAPH = (object) [
-                'copy1' => (object) ['subtitle' =>'', 'image' => '../img/book.png', 'text' => 'Evidence based research has shown that the effects of Storytelling has proven substantial impacts on our brains and is vital to the conversion process. It is the most effective way to stimulate the sensory cortex and a special class of mirror neurons in our brains causing lasting change when reinforced through repetition.          
+                'copy1' => (object) ['subtitle' =>'', 'image' => '../img/book.png', 'text' => '<p>Evidence based research has shown that the effects of Storytelling has proven substantial impacts on our brains and is vital to the conversion process. It is the most effective way to stimulate the sensory cortex and a special class of mirror neurons in our brains causing lasting change when reinforced through repetition.</p>     
                 <p>Stories are the root of our ability to communicate and understand what’s going on around us and is a very powerful mnemonic device that has lasting effect on our memory and understanding. Storytelling has also been proven to improve children’s overall mental development and shown to improve narrative recall, problem solving, increase literacy, facilitate abstract thinking, self-regulation and boost linguistic abilities.</p>'],
                 'copy2' => (object) ['subtitle' => 'The Storytelling Virtual Reality (VR) Technology', 'image'=> '../img/virtual-reality.jpg', 'text' => 'Combining Storytelling with multi-sensory effects of VR technology will undoubtedly optimize the user’s ability to retain pertinent information and tools that will assist them to address critical social issues that are affecting our youth today. Ultimately, educational VR can provide high-impact knowledge with countless possibilities. Its value lies in becoming a part of the lesson plan’s core structure as well as an alternative way to engage students through enhancement to the physical classroom.</p>
 
@@ -98,14 +100,14 @@
                 'image' => (object) ['img' => 'https://wonderseedfoundation.org/wp-content/uploads/2019/03/brain-768x670.png']
             ];
             break;
-        case '/contact/index.php';
+        case 'contact':
             $PAGE_TITLE = 'Contact Us';
             $TITLE = 'contact us';
             $SUBTITLE= array('contact information','basic information');
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./css/contact.css" rel="stylesheet">';
             $BACKGROUND = '<div class="background"></div>';
             break;
-        case '/donate/index.php':
+        case 'donate':
             $PAGE_TITLE = 'Donate';
             $TITLE = 'support us';
             $SUBTITLE = 'help shape the future';
@@ -124,7 +126,7 @@
                     $dop = '<div class="donate box-column-wrapper">';
                     $dop .= '<div class="icons">'.$this->icon.'</div>';
                     $dop .= '<h3 class="title uppercase center">'.$this->title.'</h3>';
-                    $dop .= '<p class="box-column-description text2 center">'.$this->item.'</p>';
+                    $dop .= '<p class="box-column-description text-sm center">'.$this->item.'</p>';
                     $dop .= '<div class="btn-container uppercase center hd4"><a href="'.$this->url.'" target="_blank" class="btn">'.$this->btn.'</a></div></div>';
                     echo $dop;
                 }
@@ -139,7 +141,7 @@
                 5 => new Box('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="seedling" class="icon icon-sm" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 96H0c0 123.7 100.3 224 224 224v144c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V320C288 196.3 187.7 96 64 96zm384-64c-84.2 0-157.4 46.5-195.7 115.2 27.7 30.2 48.2 66.9 59 107.6C424 243.1 512 147.9 512 32h-64z"></path></svg>','giving 360', 'Out unique program to that allows us to  give back to you as you empower our mission.', '#', 'let\'s talk')
                 );
             break;
-        case '/emotional-intelligence/index.php':
+        case 'emotional-intelligence':
             $PAGE_TITLE = 'what is emotional intelligence';
             $TITLE = 'what is emotional intelligence?';
             $INFO_TEXT = 'It is the capacity to be aware of, control, and express one’s emotions and to handle interpersonal relationships judiciously and empathetically.';
@@ -148,14 +150,14 @@
             $BACKGROUND = '<div class="background"></div>';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
             break;
-        case '/our-team/index.php':
+        case 'our-team':
             $PAGE_TITLE = 'Our Team';
             $TITLE = 'our team';
             $INFO_TEXT = '';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
             $BACKGROUND = '<div class="background"></div>';
             break;
-        case '/board-of-directors/index.php':
+        case 'board-of-directors':
             $PAGE_TITLE = 'Board of Directors';
             $TITLE = 'board of directors';
             $SUBTITLE = array('board of directors', 'advisory board');
@@ -229,26 +231,27 @@
             ];
             $BACKGROUND = '<div class="background"></div>';
             break;
-        case '/who-we-are/index.php':
+        case 'who-we-are':
             $PAGE_TITLE = 'what we do';
             $TITLE = "WHO WE ARE";
             $INFO_TEXT = 'Our Mission is to teach and promote Emotional Intelligence through of Technology and the power of Storytelling.';
             $BACKGROUND = '<div class="background"></div>';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
             break;
-        case '/mission/index.php':
+        case 'mission':
             $PAGE_TITLE = 'Our Mission';
             $TITLE = 'our mission';
             $INFO_TEXT = 'Our Mission is to teach and promote Emotional Intelligence through of Technology and Storytelling.';
             $BACKGROUND = '<div class="background"></div>';
             $CSS_PATH = '<link href="./css/circle-animation.css" rel="stylesheet"><link rel="stylesheet" href="../inc/css/background.css">';
             break;
-        case '/index.php':
+        default: //index.php
             $PAGE_TITLE = 'Home';
             $TITLE = 'the wonderseed foundation';
             $INFO_TEXT = '“Children are our most valuable resource and its best hope for the future” &nbsp;&nbsp;&lt;i&gt;-John&nbsp;F.&nbsp;Kennedy&lt;/i&gt;';
             $BACKGROUND = '<div id="particles-js"></div>';
-            $CSS_PATH = '<link rel="stylesheet" href="./inc/css/particles.css"><link rel="stylesheet" href="./index.css">';
+            $INTELLIGENCE_IMG = './img/intelligence.jpg';
+            $CSS_PATH = '<link rel="stylesheet" href="./inc/css/particles.css">';
             class Box {
                 public function __construct($icon, $title, $list) {
                     $this->icon = $icon;
@@ -257,12 +260,12 @@
                 }
 
                 public function makeBox() {
-                    $dop = '<div class="home box-column-wraper">';
-                    $dop .= '<img src="">';
+                    $dop = '<div class="box-column-wrapper brd-radius-8 wht-border" style="width: 230px;">';
+                    $dop .= '<img src="'.$this->icon.'">';
                     $dop .= '<h3 class="title capitalize center">'.$this->title.'</h3>';
                     $dop .= '<ul style="list-style-type: initial !important;">';
                     foreach($this->list as $val) {
-                        $dop .= '<li class="text2 capitalize">'.$val.'</li>';
+                        $dop .= '<li class="text-md capitalize" style="line-height: 1.5em;margin-left:25px;">'.$val.'</li>';
                     }
                     $dop .= '</ul></div>';
                     echo $dop;
@@ -277,7 +280,5 @@
             ];
             $ARR_COUNT = 5;
             break;
-        default:
-            $TUB_TITLE = 'Welcome';
     }
 ?>

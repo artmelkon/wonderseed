@@ -1,33 +1,41 @@
 /* ### quote animation ### */
 function animQuote() {
     let quote = document.querySelector("#introAnimation");
-    let strSplit = quote.innerText.split(" "),
+    if(quote != null || quote === undefined) {
+      let strSplit = quote.innerText.split(" "),
       dl = 0,
       txt = "";
   
-    strSplit.forEach(function(value) {
-      txt += `<span class='word'>${value}</span>`;
-    });
-  
-    quote.innerHTML = txt;
+      strSplit.forEach(function(value) {
+        txt += `<span class='word'>${value}</span>`;
+      });
+    
+      quote.innerHTML = txt;
+    } else {
+      return quote=null;
+    }
   }
 
-  // defining title element class
+// defining title element class
 class eTitle {
   constructor(eTarget) {
     this.eTarget = document.querySelector(`${eTarget}`);
   }
 
   get newArr() {
-    let strSplit = this.eTarget.innerText.split(''), txt = "";
-    strSplit.forEach(function(value) {
-      if(value === " ") {
-        txt += `<span class="letter">&nbsp;</span>`;
-      } else {
-        txt += `<span class="letter">${value}</span>`;
-      }
-    });
-    this.eTarget.innerHTML = txt;
+    if( this.eTarget === null || this.eTarget === undefined) {
+      return this.eTarget = null;
+    } else {
+      let strSplit = this.eTarget.innerText.split(''), txt = "";
+      strSplit.forEach(function(value) {
+        if(value === " ") {
+          txt += `<span class="letter">&nbsp;</span>`;
+        } else {
+          txt += `<span class="letter">${value}</span>`;
+        }
+      });
+      this.eTarget.innerHTML = txt;
+    }
   }
 }
 
