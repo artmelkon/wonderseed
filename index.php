@@ -51,11 +51,29 @@ ob_start();
         </div>
     </div>
 </section>
-<section class="row am-padding30" style="width: 100%; height: 425px; background-image: url(<?php echo $BACKGROUND_IMG[1]; ?>); background-position: center; background-repeat: no-repeat; background-position: right center;  background-size: cover;">
-    <div class="center" style="margin: 15px auto">
+<section class="am-padding30" style="width: 100%; min-height: 425px; background-image: url(<?php echo $BACKGROUND_IMG[1]; ?>); background-position: center; background-repeat: no-repeat; background-position: right center;  background-size: cover;">
+    <div class="center" style="margin: 15px auto;">
         <div>
             <h2 class="text-shadow uppercase">4E System</h2>
             <p>Our program is based on our socio-emotional</p>
+        </div>
+    </div>
+    <div class="row box-wrapper text-md center" style="margin:0 auto; max-width: 560px; padding: 15px 0;">
+        <div class="box-column-wrapper" style="background-color: #2D6093; width:250px;">
+            <h4>EMPOWER</h4>
+            <p>them with self awareness, self regulation and critical thinking</p>
+        </div>
+        <div class="box-column-wrapper" style="background-color: #679868; width:250px;">
+            <h4>ENGAGE</h4>
+            <p>them with social technology, active listening and self motivation</p>
+        </div>
+        <div class="box-column-wrapper" style="background-color: #2D6093; width:250px;">
+            <h4>ENLIGHTEN</h4>
+            <p>them with compassion, empathy and mindfulness</p>
+        </div>
+        <div class="box-column-wrapper" style="background-color: #679868; width:250px;">
+            <h4>EDUCATE</h4>
+            <p>them with facts and social skills</p>
         </div>
     </div>
 </section>

@@ -65,7 +65,7 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
             $SUBTITLE = 'Helping Kids Make The Right Choice';
             $BACKGROUND = '<div class="background"></div>';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
-            $BG_IMAGE = '../img/choose-the-right-direction-3.png';
+            $BG_IMAGE = '../img/choose-the-right-direction.gif';
             $PARAGRAPH = '<p style="color: #FBDC2D;">“The Right Choice Campaign is an innovative Strength Based Drug Prevention program intended to build and promote Critical Thinking in our children.
  
             <p style="color: #FBDC2D;">Our program teaches our children how to navigate through some of life’s most difficult situations with clarity and confidence. We use the power of storytelling and VR gamification education to make a deeper and lasting impression in their minds.</p>
