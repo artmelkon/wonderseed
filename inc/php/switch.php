@@ -250,8 +250,12 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
             $TITLE = 'the wonderseed foundation';
             $INFO_TEXT = '“Children are our most valuable resource and its best hope for the future” &nbsp;&nbsp;&lt;i&gt;-John&nbsp;F.&nbsp;Kennedy&lt;/i&gt;';
             $BACKGROUND = '<div id="particles-js"></div>';
-            $INTELLIGENCE_IMG = './img/intelligence.jpg';
+            $BACKGROUND_IMG = ['./img/intelligence.jpg','./img/idea.jpg'];
             $CSS_PATH = '<link rel="stylesheet" href="./inc/css/particles.css">';
+            $SUBTITLE1 = [
+                ['title'=>'The Power of Storytelling', 'text'=>'improve narrative recall and problem solving increase literacy and boost linguistic abilities facilitate abstract thinking develop self regulation and self awareness', 'url'=>'#', 'bgcolor'=>'017BC5'], ['title'=>'Technolgy', 'text'=>'We speak the language that our children understand through Virtual Reality and Gamification','#', 'bgcolor'=>'6ACA6B']
+            ];
+
             class Box {
                 public function __construct($icon, $title, $list) {
                     $this->icon = $icon;
@@ -273,12 +277,36 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
             }
             $intelligence = [
                 new Box('', 'Self Awareness', ['Identifying ones emotions', 'Accurate Self- perception', 'Recognizing strengths and limitations', 'Self- confidence', 'elf-efficacy']),
+                new Box(null, null, null),
                 new Box('', 'Self-Management', ['Impulse contro', 'Stress-management ', 'Self-discipline', 'Self-Motivation', 'Goal-setting', 'Organizational skills']),
                 new Box('', 'Social Awareness', ['Empathy', 'Respect for Others', 'Perspective taking', 'Appreciate diversity']),
                 new Box('', 'Relationship Skills', ['Communication and Active listening', 'Social Engagement', 'Relationship-building', 'Teamwork']),
                 new Box('', 'Responsible Decision-making', ['Identifying problems', 'Analyzing situations', 'Problem solving', 'Evaluating', 'Reflecting and mindfulness', 'Ethical responsibility'])
             ];
-            $ARR_COUNT = 5;
+            
+            $PARAGRAPH = [
+                [
+                    'title' => 'Our Drug Prevention Initiative',
+                    'image' => './img/no-drugs-640.gif',
+                    'text' => 'The Right Choice Campaign is a unique an interactive VR360 innovative drug prevention program to help kids learn how to make the Right Choices when faced with real life scenarios that may lead them to take drugs or drink alcohol to self-medicate or fit in.
+                    
+                    <p>Our VR platform lets kids experience a simulated real time, live action, first person perspective on how making alternative choices can lead to lifelong consequences while making the Right Choices can empower you into success.</p>
+                    
+                    <p>With our program, kids are immersed in a multi-sensory experience and active learning situation intended to promote critical thinking and mindfulness. We use the evidence- based impact of storytelling and VR gamification education to make a lasting impression in the minds of our kids which will allow them to take the tools they learn today and use them to navigate difficult situations tomorrow.</p>',
+                    'url'=>'#'
+                ],
+                [
+                    'title'=>'Preventative Justice Initiative',
+                    'image'=>'./img/doors-640.jpg',
+                    'text'=>'Express Yourself Campaign</p>                    
+                    <p>Express Your Self Campaign is our innovative Diversion program that is created to help teens and young adults avoid contact with the justice system through an app-based preventative program based on socio-emotional learning through gamification and a restorative justice curriculum.
+                    
+                    <p>The program is based on our 4 E system: Empower, Educate, Enlighten and Engage. It is designed to encourage participants to stay on the right track, teach them how to set goals and reward them for progress and success.</p>
+                    
+                    <p>Our curriculum is created on evidence-based Therapeutic modalities that promote accountability, self-awareness, critical thinking, empathy and mindfulness. Our solution is a departure from the outdated and failed Punitive modalities that have high rates of recidivism.</p>',
+                    'url'=>'#'
+                ]
+            ];
             break;
     }
 ?>

@@ -34,7 +34,6 @@ img {
 
 p {
   margin: 12px 0;
-  color: #fcf9f9;
 }
 
 header {
@@ -68,8 +67,19 @@ ul, ol, a {
   font-weight: 400;
 }
 
+.text-shadow {
+  text-shadow: 3px 3px 6px #555;
+}
+
+.box-shadow {
+  box-shadow: 3px 3px 6px #555;
+}
 .am-margin5 {
   margin: 5px;
+}
+
+.am-padding30 {
+  padding: 30px 0;
 }
 
 .column2 {
@@ -87,10 +97,6 @@ ul, ol, a {
 .icon-sm {
   width: 25%;
   margin: 0 auto;
-}
-
-.clr-white {
-  color: #fcf9f9;
 }
 
 .uppercase {
@@ -119,7 +125,6 @@ ul, ol, a {
 }
 
 .title, .subtitle {
-  color: #fcf9f9;
   margin: 8px 0 12px 0;
 }
 
@@ -370,16 +375,19 @@ img.brain {
 
 .btn {
   display: inline-block;
-  color: #fff;
   padding: 12px 18px;
   margin-top: 8px;
   background-color: transparent;
   border-radius: 8px;
   border: 1.5px solid #fff;
+  text-align: center;
+  cursor: pointer;
 }
 
 .btn:hover, .btn:active {
   background-color: rgb(180, 113, 12);
+  color: #fff;
+  transition: .5s ease-in-out;
 }
 
 
@@ -409,10 +417,17 @@ img.brain {
     font-size: 3.2em;
   }
 
-  .column2 {
+  .column50 {
     width: 50%;
   }
 
+  .column30 {
+    width: 30%;
+  }
+
+  .column70 {
+    width: 70%;
+  }
   .intro-container .word {
     font-size: 1.2em !important;
     font-weight: 400;
@@ -495,11 +510,15 @@ img.brain {
   
   .box-wrapper {
     flex-direction: column;
-    min-width: 100% !important;
+    max-width: 100% !important;
     padding: inherit;
   }
 
   .box-column-wrapper {
     margin: 12px auto;
-  }  
+  }
+
+  .homeEI .box-column-wrapper:nth-child(1) {
+    order: 3;
+  }
 }

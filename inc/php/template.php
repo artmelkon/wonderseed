@@ -16,7 +16,7 @@ echo $CSS_PATH;
 <main class="content-wrapper">
     <?php echo $content; ?>
 </main>
-<footer style="border: 2px solid red;">
+<footer>
     <p><?php echo $page; ?></p>
     <p style="color:white;"><?php echo basename($_SERVER['REQUEST_URI']).PHP_EOL; ?></p>
 </footer>

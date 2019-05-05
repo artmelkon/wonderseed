@@ -6,5 +6,8 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.autoSave": "afterDelay",
+		"editor.fontSize": 11
+	}
 }
