@@ -257,14 +257,15 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
             ];
 
             class Box {
-                public function __construct($icon, $title, $list) {
+                public function __construct($icon, $title, $list, $width) {
                     $this->icon = $icon;
                     $this->title = $title;
                     $this->list = $list;
+                    $this->width = $width;
                 }
 
                 public function makeBox() {
-                    $dop = '<div class="box-column-wrapper brd-radius-8 wht-border" style="width: 230px;">';
+                    $dop = '<div class="box-column-wrapper brd-radius-8 wht-border" style="width:'.$this->width.';">';
                     $dop .= '<img src="'.$this->icon.'">';
                     $dop .= '<h3 class="title capitalize center">'.$this->title.'</h3>';
                     $dop .= '<ul style="list-style-type: initial !important;">';
@@ -276,12 +277,15 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
                 }
             }
             $intelligence = [
-                new Box('', 'Self Awareness', ['Identifying ones emotions', 'Accurate Self- perception', 'Recognizing strengths and limitations', 'Self- confidence', 'elf-efficacy']),
-                new Box(null, null, null),
-                new Box('', 'Self-Management', ['Impulse contro', 'Stress-management ', 'Self-discipline', 'Self-Motivation', 'Goal-setting', 'Organizational skills']),
-                new Box('', 'Social Awareness', ['Empathy', 'Respect for Others', 'Perspective taking', 'Appreciate diversity']),
-                new Box('', 'Relationship Skills', ['Communication and Active listening', 'Social Engagement', 'Relationship-building', 'Teamwork']),
-                new Box('', 'Responsible Decision-making', ['Identifying problems', 'Analyzing situations', 'Problem solving', 'Evaluating', 'Reflecting and mindfulness', 'Ethical responsibility'])
+                new Box('', 'Self Awareness', ['Identifying ones emotions', 'Accurate Self- perception', 'Recognizing strengths and limitations', 'Self- confidence', 'elf-efficacy'], '230px'),
+                new Box(null, null, null, null),
+                new Box('', 'Self-Management', ['Impulse contro', 'Stress-management ', 'Self-discipline', 'Self-Motivation', 'Goal-setting', 'Organizational skills'], '230px'),
+                new Box('', 'Social Awareness', ['Empathy', 'Respect for Others', 'Perspective taking', 'Appreciate diversity'], '230px'),
+                new Box('', 'Relationship Skills', ['Communication and Active listening', 'Social Engagement', 'Relationship-building', 'Teamwork'], '230px'),
+                new Box('', 'Responsible Decision-making', ['Identifying problems', 'Analyzing situations', 'Problem solving', 'Evaluating', 'Reflecting and mindfulness', 'Ethical responsibility'], '230px')
+            ];
+            $SYSTEM_4E = [
+                
             ];
             
             $PARAGRAPH = [

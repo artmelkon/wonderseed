@@ -1,7 +1,7 @@
 /* #### google fonts #### */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
-@import './topnav.css';
-@import './particles.css';
+@import "./topnav.css";
+@import "./particles.css";
 
 * {
   margin: 0;
@@ -10,7 +10,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
 }
 
@@ -21,9 +22,7 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-flow: column nowrap;
-  margin: 25px auto !important;
+  margin: 25px auto;
   padding: 0 15px;
 }
 
@@ -45,7 +44,9 @@ header {
   margin-top: 64px;
 }
 
-ul, ol, a {
+ul,
+ol,
+a {
   font-size: 100%;
   color: inherit;
   list-style-type: none;
@@ -58,12 +59,12 @@ ul, ol, a {
 }
 
 .text-md {
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 400;
 }
 
 .text-sm {
-  font-size: .6em;
+  font-size: 0.6em;
   font-weight: 400;
 }
 
@@ -82,10 +83,6 @@ ul, ol, a {
   padding: 30px 0;
 }
 
-.column2 {
-  width: 100%;
-  margin-bottom: 12px;
-}
 .center {
   text-align: center;
 }
@@ -111,20 +108,16 @@ ul, ol, a {
   display: flex;
   -webkit-flex-flow: row wrap;
   -moz-flex-flow: row wrap;
- -ms-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-}
-
-.flx-column {
-  display: flex;
-  flex-flow: column nowrap;
 }
 
 .am-brd-radius50 {
   border-radius: 50%;
 }
 
-.title, .subtitle {
+.title,
+.subtitle {
   margin: 8px 0 12px 0;
 }
 
@@ -137,10 +130,9 @@ ul, ol, a {
 }
 
 .expend.circle:hover {
-    background-color: red !important;
-    transform: scale(8,8);
+  background-color: red !important;
+  transform: scale(8, 8);
 }
-
 
 #titleAnim {
   display: flex;
@@ -155,7 +147,7 @@ ul, ol, a {
 /* ### header animation box ### */
 .letter-box {
   display: inline-block;
-  width:100%;
+  width: 100%;
   height: 100%;
   font-weight: 700;
   text-transform: uppercase;
@@ -164,7 +156,7 @@ ul, ol, a {
   padding-bottom: 0.15em;
 }
 
-.directors-list-wrapper  {
+.directors-list-wrapper {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
@@ -193,22 +185,26 @@ ul, ol, a {
   cursor: pointer;
 }
 
-.director, .advisory {
-  color:rgb(0, 70, 0) !important;
+.director,
+.advisory {
+  color: rgb(0, 70, 0) !important;
 }
 
-.director.title, .director.subtitle, .advisory.title {
+.director.title,
+.director.subtitle,
+.advisory.title {
   padding-left: 12px;
 }
 
-.director.intro, .advisory.intro {
+.director.intro,
+.advisory.intro {
   height: 0;
   overflow: hidden;
   padding: 0 10px;
 }
 
-
-.wht-bar.active, .intro.active {
+.wht-bar.active,
+.intro.active {
   height: auto;
   padding-bottom: 10px;
   background-color: #ecb793;
@@ -240,17 +236,16 @@ img.team-image {
   width: 20%;
   max-height: 100px;
   height: 20%;
-  padding: .5%;
+  padding: 0.5%;
   background-color: rgba(251, 248, 248, 0.6);
-  box-shadow: 3px 3px 6px rgba(2,2,2, 0.4);
+  box-shadow: 3px 3px 6px rgba(2, 2, 2, 0.4);
   border-radius: 50%;
 }
 
 .team-image img:hover {
   transform: scale(1.03);
   transition: 400ms ease-in-out;
-  background-color: #FF8F42;
-
+  background-color: #ff8f42;
 }
 
 .team-member .title-box {
@@ -280,7 +275,7 @@ img.team-image {
 
 .team-member .team.intro {
   background-color: #fcf9f9;
-  color: rgba(2,2,2,  0.8);
+  color: rgba(2, 2, 2, 0.8);
   padding: 8px 15px 10px;
   box-sizing: border-box;
 }
@@ -297,7 +292,7 @@ img.team-image {
 }
 
 .intro-container {
-  padding: .7em 15px;
+  padding: 0.7em 15px;
 }
 
 .intro-container .word {
@@ -336,17 +331,16 @@ img.brain {
 
 .box-column-wrapper {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   padding: 15px 10px;
 }
-
 
 .ie.circle {
   display: inline-block;
   width: 80px;
   height: 80px;
   color: #fff;
-  font-size: .8em;
+  font-size: 0.8em;
   border: 2px solid #fff;
   padding: 18px 0;
   margin: 4px;
@@ -384,13 +378,12 @@ img.brain {
   cursor: pointer;
 }
 
-.btn:hover, .btn:active {
+.btn:hover,
+.btn:active {
   background-color: rgb(180, 113, 12);
   color: #fff;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
-
-
 
 /* ###################### */
 /* #### desktop view #### */
@@ -461,7 +454,7 @@ img.brain {
   .brain {
     width: 350px;
   }
-  
+
   .contact {
     display: flex;
     flex-flow: column nowrap;
@@ -487,9 +480,8 @@ img.brain {
   }
 
   .lt-box {
-    margin-right: 12px !important; 
+    margin-right: 12px !important;
   }
-
 }
 
 /* ###################### */
@@ -507,7 +499,7 @@ img.brain {
   .container {
     min-width: 100%;
   }
-  
+
   .box-wrapper {
     flex-direction: column;
     max-width: 100% !important;
