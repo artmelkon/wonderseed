@@ -1,6 +1,6 @@
 /* #### google fonts #### */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
-@import "./topnav.css";
+@import "./menu.css";
 @import "./particles.css";
 
 * {
@@ -33,6 +33,10 @@ img {
 
 p {
   margin: 12px 0;
+}
+
+.f2x {
+  font-size: 2em;
 }
 
 header {
@@ -110,6 +114,7 @@ a {
   -moz-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  align-items: center;
 }
 
 .am-brd-radius50 {
@@ -119,6 +124,10 @@ a {
 .title,
 .subtitle {
   margin: 8px 0 12px 0;
+}
+
+.read-more {
+  font: italic 600 .8em;
 }
 
 .circle {
@@ -217,70 +226,6 @@ a {
   width: 100%;
 }
 
-/* ### member container ### */
-
-.team-member {
-  position: relative;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-.team-static {
-  display: flex;
-  flex-flow: column nowrap;
-  margin-bottom: 5px;
-}
-
-img.team-image {
-  max-width: 100px;
-  width: 20%;
-  max-height: 100px;
-  height: 20%;
-  padding: 0.5%;
-  background-color: rgba(251, 248, 248, 0.6);
-  box-shadow: 3px 3px 6px rgba(2, 2, 2, 0.4);
-  border-radius: 50%;
-}
-
-.team-image img:hover {
-  transform: scale(1.03);
-  transition: 400ms ease-in-out;
-  background-color: #ff8f42;
-}
-
-.team-member .title-box {
-  width: 80%;
-}
-
-.team-member .torn-paper.img {
-  width: 100%;
-  margin-top: -5px;
-}
-
-.team-member .team-intro-wrapper {
-  padding: 2px 15px 0;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transform: scaleY(0.55) translate(0, -35%);
-  transition: 700ms ease-in-out;
-}
-
-.team-member .team-intro-wrapper.show {
-  opacity: 1;
-  transform: scaleY(1) translate(0, 0);
-  height: 100%;
-  transition: 1000ms ease-in-out;
-}
-
-.team-member .team.intro {
-  background-color: #fcf9f9;
-  color: rgba(2, 2, 2, 0.8);
-  padding: 8px 15px 10px;
-  box-sizing: border-box;
-}
-
-/* ### end of member section ### */
 
 .letter-box .letter {
   display: inline-block;
@@ -331,7 +276,7 @@ img.brain {
 
 .box-column-wrapper {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column;
   padding: 15px 10px;
 }
 
@@ -394,7 +339,8 @@ img.brain {
   }
 
   .container {
-    max-width: 960px !important;
+    width: 960px;
+    max-width: 80%;
     padding: inherit !important;
   }
 
@@ -442,15 +388,6 @@ img.brain {
     margin: 0 auto 60px;
   }
 
-  .team-static {
-    width: 100%;
-    flex-flow: row nowrap;
-  }
-
-  .team-member .title-box {
-    padding: 0 15px;
-  }
-
   .brain {
     width: 350px;
   }
@@ -468,11 +405,11 @@ img.brain {
   .box-wrapper {
     max-width: 960px;
     justify-content: space-around;
-    margin: auto;
+    margin: 0 auto;
   }
 
   .box-column-wrapper {
-    margin: 12px;
+    margin: 12px 6px;
   }
 
   .rt-box {
@@ -498,11 +435,11 @@ img.brain {
 
   .container {
     min-width: 100%;
+    padding: 0 15px;
   }
 
   .box-wrapper {
-    flex-direction: column;
-    max-width: 100% !important;
+    width: 100% !important;
     padding: inherit;
   }
 

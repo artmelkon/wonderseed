@@ -1,0 +1,22 @@
+.storytelling .box-column-wrapper {
+  width: 215px;
+  height: 250px;
+  margin-bottom: 25px;
+  background-color: rgba(0,70,0, .4);
+}
+
+@media screen and (min-width: 769px) {
+  .storytelling .box-wrapper {
+    background-image: url("../../img/puzzle-brain.png");
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    height:auto;
+  }
+}
+  
+  @media screen and (max-width: 768px) {
+  .storytelling .cols-lt, .storytelling .cols-rt {
+    margin: auto;
+  }
+}

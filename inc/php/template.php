@@ -9,7 +9,7 @@ echo $CSS_PATH;
 <body>
 <header>
     <nav>
-        <?php include_once $file_mobile_nav; ?>
+        <?php include_once $file_navigation; ?>
     </nav>
     <?php echo $BACKGROUND; ?>
 </header>

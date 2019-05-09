@@ -1,9 +1,12 @@
 <?php
-    switch ($page) {
-        case '/gamification/index.php';
+$uriPage = basename($_SERVER['REQUEST_URI']);
+
+    switch ($uriPage) {
+        case 'gamification';
             $PAGE_TITLE = 'Gamification of Education';
             $TITLE = 'Gamification of Education';
             $BACKGROUND = '<div class="background"></div>';
+            $SECTION_BGIMG = '../img/virtual-reality-1920.jpg';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./css/gamification.css" rel="stylesheet">';
             $PARAGRAPH = (object) [
                 'copy1' => (object) ['title' => 'VIRTUAL REALITY', 'item1' => 'Virtual Reality allows our children to “learn by doing” which promotes sensory recall, memory and critical thinking.', 'item2' => 'Virtual Reality is a powerful tool to teach empathy'],
@@ -42,9 +45,9 @@
                 }
 
                 public function boxGamification() {
-                    $dop = '<div class="gamification box-column-wrapper">';
+                    $dop = '<div class="box-column-wrapper">';
                     $dop .= '<img src="'.$this->img.'" />';
-                    $dop .= '<div class="leyer"></div>';
+                    $dop .= '<div class="layer"></div>';
                     $dop .= '<div class="gm-text text2">'.$this->str1.'</div>
                 </div>';
                     echo $dop;
@@ -57,33 +60,35 @@
                 new Box('../img/virtual-reality-3368729_640.jpg', 'releases endorphins which improves retention of information', '')
             );            
             break;
-        case '/right-choice/index.php':
+        case 'right-choice':
             $PAGE_TITLE ='The Right Choice Campaign';
             $TITLE = 'the right choice campaine';
-            $SUBTITLE = 'Helping Kids Make The Right Choice';
+            $SUBTITLE = ['Helping Kids Make The Right Choice', 'how it works'];
             $BACKGROUND = '<div class="background"></div>';
-            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
-            $BG_IMAGE = '../img/choose-the-right-direction-3.png';
+            $SECTION_BGIMG = '../img/target-1920x640.jpg';
+            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./right-choice.css" rel="stylesheet">';
             $PARAGRAPH = '<p style="color: #FBDC2D;">“The Right Choice Campaign is an innovative Strength Based Drug Prevention program intended to build and promote Critical Thinking in our children.
  
             <p style="color: #FBDC2D;">Our program teaches our children how to navigate through some of life’s most difficult situations with clarity and confidence. We use the power of storytelling and VR gamification education to make a deeper and lasting impression in their minds.</p>
              
             <p style="color: #FBDC2D;">Our AI technology allows for prevention, early intervention and the ability to measure impact while enabling us to continue to improve upon how we can best help our children in the way they need it most.”</p>';
             break;
-        case '/storytelling/index.php':
+        case 'storytelling':
             $PAGE_TITLE = 'Storytelling';
             $TITLE = 'The Power of Storytelling';
             $SUBTITLE = 'How The Power of Storytelling Works';
             $BACKGROUND = '<div class="background"></div>';
-            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link rel="stylesheet" href="./css/storytelling.css">';
+            $SECTION_BGIMG = '../img/library-1920.jpg';
+            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link rel="stylesheet" href="./storytelling.css">';
+            $IMG_PATH = '../img/library-1920.jpg';
             $PARAGRAPH = (object) [
-                'copy1' => (object) ['subtitle' =>'', 'image' => '../img/book.png', 'text' => 'Evidence based research has shown that the effects of Storytelling has proven substantial impacts on our brains and is vital to the conversion process. It is the most effective way to stimulate the sensory cortex and a special class of mirror neurons in our brains causing lasting change when reinforced through repetition.          
+                'copy1' => (object) ['subtitle' =>'', 'image' => '../img/book.png', 'text' => '<p>Evidence based research has shown that the effects of Storytelling has proven substantial impacts on our brains and is vital to the conversion process. It is the most effective way to stimulate the sensory cortex and a special class of mirror neurons in our brains causing lasting change when reinforced through repetition.</p>     
                 <p>Stories are the root of our ability to communicate and understand what’s going on around us and is a very powerful mnemonic device that has lasting effect on our memory and understanding. Storytelling has also been proven to improve children’s overall mental development and shown to improve narrative recall, problem solving, increase literacy, facilitate abstract thinking, self-regulation and boost linguistic abilities.</p>'],
                 'copy2' => (object) ['subtitle' => 'The Storytelling Virtual Reality (VR) Technology', 'image'=> '../img/virtual-reality.jpg', 'text' => 'Combining Storytelling with multi-sensory effects of VR technology will undoubtedly optimize the user’s ability to retain pertinent information and tools that will assist them to address critical social issues that are affecting our youth today. Ultimately, educational VR can provide high-impact knowledge with countless possibilities. Its value lies in becoming a part of the lesson plan’s core structure as well as an alternative way to engage students through enhancement to the physical classroom.</p>
 
                 <p>It is not designed to be a replacement. VR is just as much about giving students the opportunity to create a simulated digital world as it is blending the real world and artificial reality together. The uses of digital reality are obvious when thinking of its wow factor but beyond its surface of recreational capabilities research has shown that it can be most beneficial when used in an instructional environment.</p>
             
-                <p class="read-more">Read More</p>
+                <p class="read-more">Read More...</p>
                 <p>VR is the next big step forward in education which will be excellent for educators and students alike. Educators will be able to capture the attention of their students like never before and get them more actively involved in the classroom. Students are always trying to do what’s cool and what’s new; utilizing VR technology in classrooms will appeal to students because it’s the latest and greatest thing and it’s very cool to use. Storytelling VR technology will transcend the antiquated delivery of information seen in our schools today and improve comprehensive retention in the different types of learners (Visual, Auditory and Kinesthetic).</p>
             
                 <p>The Storytelling VR technology can provide enriched learning environments for students who otherwise may not respond to traditional educational methods. It has the proficiency to deliver countless new immersion concentrations to assist in lesson plans. Research consistently shows that we are moving away from simply ‘learning’ a subject or topic to ‘feeling’ the content. Occasionally students just need to be taken out of a classroom environment and dropped into an immersive world; where they can watch dinosaurs walk around them, experience a performance in a concert hall, or live stream with other students around the world in VR social spaces. The list of apps being generated is dramatically growing, and with every new piece of software, another avenue for learners opens up.</p>
@@ -98,14 +103,14 @@
                 'image' => (object) ['img' => 'https://wonderseedfoundation.org/wp-content/uploads/2019/03/brain-768x670.png']
             ];
             break;
-        case '/contact/index.php';
+        case 'contact':
             $PAGE_TITLE = 'Contact Us';
             $TITLE = 'contact us';
             $SUBTITLE= array('contact information','basic information');
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./css/contact.css" rel="stylesheet">';
             $BACKGROUND = '<div class="background"></div>';
             break;
-        case '/donate/index.php':
+        case 'donate':
             $PAGE_TITLE = 'Donate';
             $TITLE = 'support us';
             $SUBTITLE = 'help shape the future';
@@ -124,7 +129,7 @@
                     $dop = '<div class="donate box-column-wrapper">';
                     $dop .= '<div class="icons">'.$this->icon.'</div>';
                     $dop .= '<h3 class="title uppercase center">'.$this->title.'</h3>';
-                    $dop .= '<p class="box-column-description text2 center">'.$this->item.'</p>';
+                    $dop .= '<p class="box-column-description text-sm center">'.$this->item.'</p>';
                     $dop .= '<div class="btn-container uppercase center hd4"><a href="'.$this->url.'" target="_blank" class="btn">'.$this->btn.'</a></div></div>';
                     echo $dop;
                 }
@@ -139,7 +144,7 @@
                 5 => new Box('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="seedling" class="icon icon-sm" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 96H0c0 123.7 100.3 224 224 224v144c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V320C288 196.3 187.7 96 64 96zm384-64c-84.2 0-157.4 46.5-195.7 115.2 27.7 30.2 48.2 66.9 59 107.6C424 243.1 512 147.9 512 32h-64z"></path></svg>','giving 360', 'Out unique program to that allows us to  give back to you as you empower our mission.', '#', 'let\'s talk')
                 );
             break;
-        case '/emotional-intelligence/index.php':
+        case 'emotional-intelligence':
             $PAGE_TITLE = 'what is emotional intelligence';
             $TITLE = 'what is emotional intelligence?';
             $INFO_TEXT = 'It is the capacity to be aware of, control, and express one’s emotions and to handle interpersonal relationships judiciously and empathetically.';
@@ -148,16 +153,17 @@
             $BACKGROUND = '<div class="background"></div>';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
             break;
-        case '/our-team/index.php':
+        case 'our-team':
             $PAGE_TITLE = 'Our Team';
             $TITLE = 'our team';
             $INFO_TEXT = '';
-            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
+            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./team.css" rel="stylesheet">';
             $BACKGROUND = '<div class="background"></div>';
             break;
-        case '/board-of-directors/index.php':
+        case 'board-of-directors':
             $PAGE_TITLE = 'Board of Directors';
             $TITLE = 'board of directors';
+            $BACKGROUND = '<div class="background"></div>';
             $SUBTITLE = array('board of directors', 'advisory board');
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
             class Director {
@@ -227,57 +233,94 @@
                 17 => new Advisory('Jose Osuna', 'Chief Mission Officer, The Meaning Foundation, Probation Ov'),
                 18 => new Advisory('Frank Jansen', 'Senior Vice President at Chicago Title')
             ];
-            $BACKGROUND = '<div class="background"></div>';
             break;
-        case '/who-we-are/index.php':
+        case 'who-we-are':
             $PAGE_TITLE = 'what we do';
             $TITLE = "WHO WE ARE";
             $INFO_TEXT = 'Our Mission is to teach and promote Emotional Intelligence through of Technology and the power of Storytelling.';
             $BACKGROUND = '<div class="background"></div>';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
             break;
-        case '/mission/index.php':
+        case 'mission':
             $PAGE_TITLE = 'Our Mission';
             $TITLE = 'our mission';
             $INFO_TEXT = 'Our Mission is to teach and promote Emotional Intelligence through of Technology and Storytelling.';
             $BACKGROUND = '<div class="background"></div>';
             $CSS_PATH = '<link href="./css/circle-animation.css" rel="stylesheet"><link rel="stylesheet" href="../inc/css/background.css">';
             break;
-        case '/index.php':
+        default: //index.php
             $PAGE_TITLE = 'Home';
             $TITLE = 'the wonderseed foundation';
             $INFO_TEXT = '“Children are our most valuable resource and its best hope for the future” &nbsp;&nbsp;&lt;i&gt;-John&nbsp;F.&nbsp;Kennedy&lt;/i&gt;';
             $BACKGROUND = '<div id="particles-js"></div>';
-            $CSS_PATH = '<link rel="stylesheet" href="./inc/css/particles.css"><link rel="stylesheet" href="./index.css">';
+            $SECTION_BGIMG = ['./img/intelligence.jpg','./img/idea.jpg'];
+            $CSS_PATH = '<link rel="stylesheet" href="./inc/css/particles.css">';
+            $SUBTITLE = [
+                ['WHAT IS EMOTIONAL INTELLIGENCE', '<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="question-circle" class="box-shadow am-brd-radius50" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z"></path></svg>'],
+                ['4E System', 'Our program is based on our socio-emotional']
+            ];
+            $SLIDER_BOX = [
+                ['title'=>'The Power of Storytelling', 'text'=>'improve narrative recall and problem solving increase literacy and boost linguistic abilities facilitate abstract thinking develop self regulation and self awareness', 'url'=>'#', 'bgcolor'=>'017BC5'], ['title'=>'Technology', 'text'=>'We speak the language that our children understand through Virtual Reality and Gamification','#', 'bgcolor'=>'6ACA6B']
+            ];
+
             class Box {
-                public function __construct($icon, $title, $list) {
+                public function __construct($icon, $title, $list, $width) {
                     $this->icon = $icon;
                     $this->title = $title;
                     $this->list = $list;
+                    $this->width = $width;
                 }
 
                 public function makeBox() {
-                    $dop = '<div class="home box-column-wraper">';
-                    $dop .= '<img src="">';
+                    $dop = '<div class="box-column-wrapper brd-radius-8 wht-border" style="width:'.$this->width.';">';
+                    $dop .= '<img src="'.$this->icon.'">';
                     $dop .= '<h3 class="title capitalize center">'.$this->title.'</h3>';
                     $dop .= '<ul style="list-style-type: initial !important;">';
                     foreach($this->list as $val) {
-                        $dop .= '<li class="text2 capitalize">'.$val.'</li>';
+                        $dop .= '<li class="text-md capitalize" style="line-height: 1.5em;margin-left:25px;">'.$val.'</li>';
                     }
                     $dop .= '</ul></div>';
                     echo $dop;
                 }
             }
             $intelligence = [
-                new Box('', 'Self Awareness', ['Identifying ones emotions', 'Accurate Self- perception', 'Recognizing strengths and limitations', 'Self- confidence', 'elf-efficacy']),
-                new Box('', 'Self-Management', ['Impulse contro', 'Stress-management ', 'Self-discipline', 'Self-Motivation', 'Goal-setting', 'Organizational skills']),
-                new Box('', 'Social Awareness', ['Empathy', 'Respect for Others', 'Perspective taking', 'Appreciate diversity']),
-                new Box('', 'Relationship Skills', ['Communication and Active listening', 'Social Engagement', 'Relationship-building', 'Teamwork']),
-                new Box('', 'Responsible Decision-making', ['Identifying problems', 'Analyzing situations', 'Problem solving', 'Evaluating', 'Reflecting and mindfulness', 'Ethical responsibility'])
+                new Box('', 'Self Awareness', ['Identifying ones emotions', 'Accurate Self- perception', 'Recognizing strengths and limitations', 'Self- confidence', 'elf-efficacy'], '230px'),
+                new Box(null, null, null, null),
+                new Box('', 'Self-Management', ['Impulse contro', 'Stress-management ', 'Self-discipline', 'Self-Motivation', 'Goal-setting', 'Organizational skills'], '230px'),
+                new Box('', 'Social Awareness', ['Empathy', 'Respect for Others', 'Perspective taking', 'Appreciate diversity'], '230px'),
+                new Box('', 'Relationship Skills', ['Communication and Active listening', 'Social Engagement', 'Relationship-building', 'Teamwork'], '230px'),
+                new Box('', 'Responsible Decision-making', ['Identifying problems', 'Analyzing situations', 'Problem solving', 'Evaluating', 'Reflecting and mindfulness', 'Ethical responsibility'], '230px')
             ];
-            $ARR_COUNT = 5;
+            $SYSTEM_4E = [
+                ['EMPOWER', 'them with self awareness, self regulation and critical thinking', '2D6093'],
+                ['ENGAGE', 'them with social technology, active listening and self motivation', '679868'],
+                ['ENLIGHTEN', 'them with compassion, empathy and mindfulness', '2D6093'],
+                ['EDUCATE', 'them with facts and social skills', '679868']
+            ];
+            
+            $PARAGRAPH = [
+                [
+                    'title' => 'Our Drug Prevention Initiative',
+                    'image' => './img/no-drugs-640.gif',
+                    'text' => '<p>The Right Choice Campaign is a unique an interactive VR360 innovative drug prevention program to help kids learn how to make the Right Choices when faced with real life scenarios that may lead them to take drugs or drink alcohol to self-medicate or fit in.</p>
+                    
+                    <p>Our VR platform lets kids experience a simulated real time, live action, first person perspective on how making alternative choices can lead to lifelong consequences while making the Right Choices can empower you into success.</p>
+                    
+                    <p>With our program, kids are immersed in a multi-sensory experience and active learning situation intended to promote critical thinking and mindfulness. We use the evidence- based impact of storytelling and VR gamification education to make a lasting impression in the minds of our kids which will allow them to take the tools they learn today and use them to navigate difficult situations tomorrow.</p>',
+                    'url'=>'#'
+                ],
+                [
+                    'title'=>'Preventative Justice Initiative',
+                    'image'=>'./img/doors-640.jpg',
+                    'text'=>'Express Yourself Campaign</p>                    
+                    <p>Express Your Self Campaign is our innovative Diversion program that is created to help teens and young adults avoid contact with the justice system through an app-based preventative program based on socio-emotional learning through gamification and a restorative justice curriculum.
+                    
+                    <p>The program is based on our 4 E system: Empower, Educate, Enlighten and Engage. It is designed to encourage participants to stay on the right track, teach them how to set goals and reward them for progress and success.</p>
+                    
+                    <p>Our curriculum is created on evidence-based Therapeutic modalities that promote accountability, self-awareness, critical thinking, empathy and mindfulness. Our solution is a departure from the outdated and failed Punitive modalities that have high rates of recidivism.</p>',
+                    'url'=>'#'
+                ]
+            ];
             break;
-        default:
-            $TUB_TITLE = 'Welcome';
     }
 ?>

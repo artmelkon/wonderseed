@@ -1,11 +1,9 @@
-.gamification {
-  display: flex;
-  margin: 10px;
+.gamification .box-column-wrapper {
   position: relative;
   width: 265px;
 }
 
-.leyer {
+.layer {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,28 +24,3 @@
 }
 
 
-.vr.box-wrapper div:nth-child(1) {
-  padding-top: 17px;
-}
-
-.vr.box-wrapper div:nth-child(2) {
-  padding-left: 12px;
-}
-
-.vr.box-wrapper div:nth-child(1), .vr.box-wrapper div:nth-child(2) {
-  width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .vr.box-wrapper {
-    flex-direction: row;
-  }
-
-  .vr.box-wrapper div:nth-child(1){
-    width: 40%;
-  } 
-  
-  .vr.box-wrapper div:nth-child(2) {
-    width: 60%;
-  }
-}

@@ -1,20 +1,49 @@
 <?php
 $page = $_SERVER['SCRIPT_NAME'];
-include_once '../inc/php/misc-lib.php';
-include_once '../inc/php/switch.php';
+include_once '../inc/php/libraries/misc-lib.php';
+include_once '../inc/php/libraries/switch.php';
 
 ob_start();
 ?>
 <section>
-    <div class="hide" style="background-image: url(<?php echo $BG_IMAGE; ?>); background-position: top center; background-size: 40%; background-repeat: no-repeat; height: 500px; min-height: 100%; width: 100%; position: absolute; top: 120px; left: 0; z-index: -10; opacity: .2"></div>
     <div class="container">
-        <h1 class="title uppercase center"><?php echo $TITLE; ?></h1>
-    </div>
-    <div class="container">
-        <h3 class="title uppercase center"><?php echo $SUBTITLE; ?></h3>
-        <div><?php echo $PARAGRAPH; ?></div>
+        <h1 class="title uppercase center f2x"><?php echo $TITLE; ?></h1>
     </div>
 </section>
+<section>
+    <div class="container right-choice-box">
+        <div class="am-padding30">
+            <h3 class="title uppercase center"><?php echo $SUBTITLE[0]; ?></h3>
+            <?php echo $PARAGRAPH; ?>
+        </div>
+    </div>
+</section>
+<section style="background-color: #6EA1B1">
+    <div class="am-padding30 center">
+        <h1 class="title uppercase f2x"><?php echo $SUBTITLE[1]; ?></h1>
+    </div>
+   <div class="right-choice container box-wrapper row">
+        <div class="box-column-wrapper">
+            <h2 class="center uppercase">Drug Prevention Campaign</h2>
+            <p>We have developed a unique interactive VR 360 Drug Prevention Campaign to help our kids make
+    TRCs (The Right Choices) when faced with scenarios that may lead them to take drugs or drink alcohol to fit in or to self-medicate.</p>
+        </div>
+        <div class="box-column-wrapper">
+            <h2 class="center uppercase">VR 360 platform</h2>
+            <p>Our VR 360 platform lets kids experience a simulated live action, first person interactive perspective on how making alternative choices can lead to lifelong consequences while making
+the “Right Choices” can empower you to success.
+
+Our VR 360 platform lets kids experience a  simulated live action, first person interactive perspective on how making alternative choices can lead to lifelong consequences while making
+the “Right Choices” can empower you to success.</p>
+        </div>
+        <div class="box-column-wrapper">
+            <h2 class="center uppercase">active learning</h2>
+            <p>With our program, students are immersed in a multi-sensory experience and active learning situation intended to promote critical thinking and
+mindfulness.</p>
+        </div>
+   </div>
+</section>
+
 <?php
 $content = ob_get_clean();
 

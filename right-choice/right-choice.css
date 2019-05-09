@@ -1,0 +1,39 @@
+.right-choice-box {
+  position: relative;
+  margin: 0 auto;
+}
+
+.right-choice-box::before {
+  background-image: url(../img/choose-the-right-direction.gif);
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  opacity: .4;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .right-choice-box {
+    height: 500px;
+  }
+  .right-choice-box::before {
+      background-image: url(../img/choose-the-right-direction.gif);
+      background-size: 50%;
+  }
+
+  .right-choice {
+   align-items: top !important;
+   border: 2px solid red;
+  }
+  .right-choice .box-column-wrapper {
+    width: 250px;
+    border: 2px solid red;
+  }
+}

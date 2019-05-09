@@ -7,10 +7,10 @@ function Team (name, subtitle, bio, image) {
     this.image = image;
     this.output = () => {
       let txt = "";
-      txt += `<div class="team-member container" onclick="showIntro(this,\'team\')">`;
+      txt += `<div class="team-member" onclick="showIntro(this,\'team\')">`;
       txt += `<div class="team-static"><img src="../img/team/${this.image}" class="team-image" />`;
-      txt += `<div class="team title-box"><h4 class="title" style="font-weight: 400;">${this.name}</h4>`;
-      txt += `<p class="text2">${this.subtitle}</p></div></div>`;
+      txt += `<div class="intro-box"><h4 class="title" style="font-weight: 400;">${this.name}</h4>`;
+      txt += `<p class="text-md">${this.subtitle}</p></div></div>`;
       txt += `<div class="team-intro-wrapper" id="Toggle"><div class="team intro text2">${this.bio}</div>`;
       txt += `<div class="torn-paper img"><img src="../img/torn-paper-sdw.png"></div></div></div>`;
       return txt;

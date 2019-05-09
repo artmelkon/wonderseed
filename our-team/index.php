@@ -1,13 +1,13 @@
 <?php
 $page = $_SERVER['SCRIPT_NAME'];
-include_once '../inc/php/misc-lib.php';
-include_once '../inc/php/switch.php';
+include_once '../inc/php/libraries/misc-lib.php';
+include_once '../inc/php/libraries/switch.php';
 
 ob_start();
 ?>
-<section class="container">
-    <div class="title uppercase center hd2"><?php echo $TITLE; ?></div>
-    <div class="team-members"></div>
+<section>
+    <h1 class="title uppercase center f2x"><?php echo $TITLE; ?></h1>
+    <div class="team-members box-wrapper container"></div>
 </section>
 <?php
  $content = ob_get_clean();
