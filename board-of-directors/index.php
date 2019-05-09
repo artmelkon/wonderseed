@@ -1,16 +1,16 @@
 <?php
 $page = $_SERVER['SCRIPT_NAME'];
 
-include_once '../inc/php/misc-lib.php';
-include_once '../inc/php/switch.php';
+include_once '../inc/php/libraries/misc-lib.php';
+include_once '../inc/php/libraries/switch.php';
 
 ob_start();
 ?>
 <section class="container">
-    <div class="title uppercase center hd2"><?php echo $TITLE; ?></div>
+    <h1 class="title uppercase center f2x"><?php echo $TITLE; ?></h1>
     <div class="directors-list-wrapper container">
         <div class="directors list-column">
-        <div class="directors-tab subtitle uppercase hd3 center"><?php echo  $SUBTITLE[0]; ?></div>
+        <h3 class="directors-tab subtitle uppercase center"><?php echo  $SUBTITLE[0]; ?></h3>
 
         <?php  //to display board members on board member page
         foreach($director as $value) {
@@ -18,7 +18,7 @@ ob_start();
         } ?>
         </div>
         <div class="advisors list-column">
-        <div class="directors-tab subtitle uppercase hd3 center" onclick="toggleTitle(this, 1)"><?php echo  $SUBTITLE[1]; ?></div>
+        <h3 class="directors-tab subtitle uppercase center" onclick="toggleTitle(this, 1)"><?php echo  $SUBTITLE[1]; ?></h3>
         <?php  // to display advisory board
         foreach($advisory as $value) {
             echo $value->advisory();

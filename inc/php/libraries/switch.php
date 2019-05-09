@@ -107,8 +107,13 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
             $PAGE_TITLE = 'Contact Us';
             $TITLE = 'contact us';
             $SUBTITLE= array('contact information','basic information');
-            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./css/contact.css" rel="stylesheet">';
+            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./contact.css" rel="stylesheet">';
             $BACKGROUND = '<div class="background"></div>';
+            $ADDRESS = [
+                '<i class="fas fa-home fa-lg"></i></span><spa>15225 Dickens St #3 Sherman Oaks, CA. 91403',
+                '<i class="fas fa-mobile-alt fa-lg"></i>(213) 340-4899',
+                '<i class="fas fa-envelope fa-lg"></i><a href="mailto:info@WonderSeedFoundation.com">info@WonderSeedFoundation.com</a>'
+            ];
             break;
         case 'donate':
             $PAGE_TITLE = 'Donate';

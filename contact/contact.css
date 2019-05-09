@@ -1,0 +1,59 @@
+/* styling contact us page */
+.box-wrapper {
+  padding: 0 15px;
+}
+.contact .col-rt, .contact .col-lt {
+  width: 100%;
+}
+
+i.fas {
+  padding-right: 12px;
+}
+
+.box-wrapper ul {
+  color: #fff;
+}
+
+.box-wrapper li {
+  padding: 8px 12px;
+}
+
+.c-form input, .c-form textarea {
+  font: inherit;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  padding: 8px 12px;
+  margin-bottom: 4px;
+  width: 100%;
+}
+.c-form input, .c-form textarea, .btn {
+  color: #fff;
+}
+
+.btn {
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.c-form textarea {
+  height: 100px;
+  max-height: 250vh;
+  resize: vertical;
+}
+
+::placeholder {
+  color: #fff;
+  font-size: .8em;
+  letter-spacing: .2em;
+}
+
+@media (min-width: 769px) {
+  .contact .col-lt {
+    max-width: 35%
+  }
+
+  .contact .col-rt {
+    max-width: 65%;
+  }
+}

@@ -14,10 +14,10 @@ ob_start();
     <div>
         <div id='introAnimation' class='intro-container text-md'><?php echo $INFO_TEXT; ?></div>
     </div>
-    <div class="box-wrapper" style="width: 700px; max-width: 80%; margin-top: 64px;">
+    <div class="box-wrapper" style="width: 750px; margin-top: 64px;">
     <?php
         for ($i = 0; $i < count($SLIDER_BOX); $i++) { ?>
-            <div class="box-column-wrapper brd-radius-8 wht-border rt-box" style="background-color: #<?php echo $SLIDER_BOX[$i]['bgcolor']; ?>; max-width: 310px; height: 225px; margin-top: 25px;">
+            <div class="box-column-wrapper brd-radius-8 wht-border rt-box" style="background-color: #<?php echo $SLIDER_BOX[$i]['bgcolor']; ?>; max-width: 350px; height: 235px; margin-top: 25px;">
                 <div class="icon"></div>
                 <h3 class="center"><?php echo $SLIDER_BOX[$i]['title']; ?></h3>
                 <p class="center text-md"><?php echo $SLIDER_BOX[$i]['text']; ?></p>

@@ -1,7 +1,7 @@
 <?php
     $page = 'kids';
-    include_once '../inc/php/misc-lib.php';
-    include_once '../inc/php/switch.php';
+    include_once '../inc/php/libraries/misc-lib.php';
+    include_once '../inc/php/libraries/switch.php';
 ?>
 <!doctype html>
 <html>

@@ -1,25 +1,24 @@
 <?php
 $page = $_SERVER['SCRIPT_NAME'];
-include_once '../inc/php/misc-lib.php';
-include_once '../inc/php/switch.php';
+include_once '../inc/php/libraries/misc-lib.php';
+include_once '../inc/php/libraries/switch.php';
 
 ob_start();
 ?>
-<section class="contact container">
-    <div class="title uppercase center hd2"><?php echo $TITLE; ?></div>
-    <div class="contact-wrapper">
-        <div class="column2">
+<section class="contact">
+    <h1 class="title uppercase center f2x"><?php echo $TITLE; ?></h1>
+    <div class="box-wrapper container am-padding30">
+        <div class="col-lt">
             <h3 class="title center capitalize"><?php echo $SUBTITLE[0]; ?></h3>
-            <ul class="text2">
-                <script>
-                    const address = ['<i class="fas fa-home fa-lg"></i>15225 Dickens St #3 Sherman Oaks, CA. 91403A', '<i class="fas fa-mobile-alt fa-lg"></i>(213) 340-4899', '<i class="fas fa-envelope fa-lg"></i><a href="mailto:info@WonderSeedFoundation.com">info@WonderSeedFoundation.com</a>'];
-                    address.forEach( val => {
-                        document.write(`<li>${val}</li>`);
-                    });
-                </script>
+            <ul class="text-md">
+                <?php
+                    foreach ($ADDRESS as $adr) {
+                        echo "<li>$adr</li>\n";
+                    }
+                ?>
             </ul>
-        </div>
-        <div class="column2 form-inp">
+        </span>
+        <div class="col-rt form-inp">
             <h3 class="title center capitalize"><?php echo $SUBTITLE[1]; ?></h3>
             <div id="cForm" class='c-form'>
                 <input type="text" name="fname" placeholder="First Name *" required>

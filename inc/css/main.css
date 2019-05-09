@@ -314,8 +314,9 @@ img.brain {
 
 .btn {
   display: inline-block;
-  padding: 12px 18px;
-  margin-top: 8px;
+  padding: 8px 18px;
+  width: 50%;
+  margin: 8px auto;
   background-color: transparent;
   border-radius: 8px;
   border: 1.5px solid #fff;
@@ -403,7 +404,8 @@ img.brain {
   }
 
   .box-wrapper {
-    max-width: 960px;
+    width: 960px;
+    max-width: 80%;
     justify-content: space-around;
     margin: 0 auto;
   }
