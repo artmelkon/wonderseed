@@ -6,23 +6,23 @@ include_once '../inc/php/libraries/switch.php';
 
 ob_start();
 ?>
-<section class="container">
+<section>
     <h1 class="title uppercase center f2x"><?php echo $TITLE; ?></h1>
-    <div class="directors-list-wrapper container">
-        <div class="directors list-column">
-        <h3 class="directors-tab subtitle uppercase center"><?php echo  $SUBTITLE[0]; ?></h3>
+    <div class="directors box-wrapper container">
+        <div class="col-lt">
+            <h3 class="directors-tab uppercase center"><?php echo  $SUBTITLE[0]; ?></h3>
 
-        <?php  //to display board members on board member page
-        foreach($director as $value) {
-            echo $value->person();
-        } ?>
+            <?php  //to display board members on board member page
+            foreach($director as $value) {
+                echo $value->person();
+            } ?>
         </div>
-        <div class="advisors list-column">
-        <h3 class="directors-tab subtitle uppercase center" onclick="toggleTitle(this, 1)"><?php echo  $SUBTITLE[1]; ?></h3>
-        <?php  // to display advisory board
-        foreach($advisory as $value) {
-            echo $value->advisory();
-        } ?>
+        <div class="col-rt">
+            <h3 class="directors-tab uppercase center" onclick="toggleTitle(this, 1)"><?php echo  $SUBTITLE[1]; ?></h3>
+            <?php  // to display advisory board
+            foreach($advisory as $value) {
+                echo $value->person();
+            } ?>
         </div>
     </div>
 </section>

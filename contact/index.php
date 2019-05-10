@@ -7,7 +7,7 @@ ob_start();
 ?>
 <section class="contact">
     <h1 class="title uppercase center f2x"><?php echo $TITLE; ?></h1>
-    <div class="box-wrapper container am-padding30">
+    <div class="box-wrapper container am-padding30 row">
         <div class="col-lt">
             <h3 class="title center capitalize"><?php echo $SUBTITLE[0]; ?></h3>
             <ul class="text-md">
@@ -17,7 +17,7 @@ ob_start();
                     }
                 ?>
             </ul>
-        </span>
+        </div>
         <div class="col-rt form-inp">
             <h3 class="title center capitalize"><?php echo $SUBTITLE[1]; ?></h3>
             <div id="cForm" class='c-form'>

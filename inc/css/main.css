@@ -121,8 +121,7 @@ a {
   border-radius: 50%;
 }
 
-.title,
-.subtitle {
+.title {
   margin: 8px 0 12px 0;
 }
 
@@ -164,68 +163,6 @@ a {
   overflow: hidden;
   padding-bottom: 0.15em;
 }
-
-.directors-list-wrapper {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
-}
-
-.list-column {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
-  padding: 0 15px;
-}
-
-.wht-bar {
-  display: inline-block;
-  line-height: 30px;
-  margin: 2px 11px 2px 0;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 3px 3px 8px rgba(2, 2, 2, 0.4);
-  overflow: hidden;
-  height: 30px;
-}
-
-.wht-bar:hover {
-  background-color: #ecb793;
-  transition: 500ms ease-in-out;
-  cursor: pointer;
-}
-
-.director,
-.advisory {
-  color: rgb(0, 70, 0) !important;
-}
-
-.director.title,
-.director.subtitle,
-.advisory.title {
-  padding-left: 12px;
-}
-
-.director.intro,
-.advisory.intro {
-  height: 0;
-  overflow: hidden;
-  padding: 0 10px;
-}
-
-.wht-bar.active,
-.intro.active {
-  height: auto;
-  padding-bottom: 10px;
-  background-color: #ecb793;
-  color: #fff;
-  transition: 500ms ease-out;
-}
-
-.directors-tab.subtitle {
-  padding: 8px 15px;
-  width: 100%;
-}
-
 
 .letter-box .letter {
   display: inline-block;
@@ -429,10 +366,6 @@ img.brain {
 @media screen and (max-width: 768px) {
   .title-container {
     width: 280px;
-  }
-
-  .hide {
-    visibility: hidden;
   }
 
   .container {

@@ -27,27 +27,31 @@ ob_start();
 <section class="storytelling am-padding30" style="background-color: #004600;">
     <div class="box-wrapper">
         <div class="cols-lt">
-            <div class="box-column-wrapper wht-border brd-radius-8">
-                <?php //echo $STORY->story1->icon; ?>
-                <h4 class="uppercase title center"><?php echo $STORY->story1->title; ?></h4>
-                <p><?php echo $STORY->story1->text; ?></p>
+            <div class="box-column-wrapper wht-border brd-radius-8 center wide-hide">
+                <img src="../../img/puzzle-brain.png" />
             </div>
-            <div class="box-column-wrapper wht-border brd-radius-8">
+
+            <div class="box-column-wrapper wht-border brd-radius-8 center">
+                <?php //echo $STORY->story1->icon; ?>
+                <h4 class="uppercase title"><?php echo $STORY->story1->title; ?></h4>
+                <p class="text-md"><?php echo $STORY->story1->text; ?></p>
+            </div>
+            <div class="box-column-wrapper wht-border brd-radius-8 center">
                 <img src="">
-                <h4 class="uppercase title center"><?php echo $STORY->story2->title; ?></h4>
-                <p><?php echo $STORY->story2->text; ?></p>
+                <h4 class="uppercase title"><?php echo $STORY->story2->title; ?></h4>
+                <p class="text-md"><?php echo $STORY->story2->text; ?></p>
             </div>
         </div>
         <div class="cols-rt">
-            <div class="box-column-wrapper wht-border brd-radius-8">
+            <div class="box-column-wrapper wht-border brd-radius-8 center">
                 <img src="">
-                <h4 class="title uppercase center"><?php echo $STORY->story3->title; ?></h4>
-                <p><?php echo $STORY->story2->text; ?></p>
+                <h4 class="title uppercase"><?php echo $STORY->story3->title; ?></h4>
+                <p class="text-md"><?php echo $STORY->story3->text; ?></p>
             </div>
-            <div class="box-column-wrapper wht-border brd-radius-8">
+            <div class="box-column-wrapper wht-border brd-radius-8 center">
                 <img src="">
-                <h4 class="title uppercase center"><?php echo $STORY->story4->title; ?></h4>
-                <p><?php echo $STORY->story2->text; ?></p>
+                <h4 class="title uppercase"><?php echo $STORY->story4->title; ?></h4>
+                <p class="text-md"><?php echo $STORY->story4->text; ?></p>
             </div>
         </div>
     </div>        

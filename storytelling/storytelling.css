@@ -13,10 +13,18 @@
     background-repeat: no-repeat;
     height:auto;
   }
+
+  .wide-hide {
+    display: none;
+  }
 }
   
   @media screen and (max-width: 768px) {
   .storytelling .cols-lt, .storytelling .cols-rt {
     margin: auto;
+  }
+
+  .hide {
+    display: none;
   }
 }

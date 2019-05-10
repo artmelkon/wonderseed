@@ -99,7 +99,7 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
                 'story1' => (object) ['icon' => '<i class="fas fa-assistive-listening-systems"></i>', 'title' => 'Neural Coupling', 'text' => 'A story activates parts in the brain that allows the listener to turn the story in to their own ideas and experience thanks to a process called neural coupling.'],
                 'story2' => (object) ['icon' => '<i class="fa fa-compress"></i>', 'title' => 'Mirroring', 'text' => 'Listeners will not only experience the similar brain activity to each other, but also to the speaker.'],
                 'story3' => (object) ['icon' => '', 'title' => 'Dopamine', 'text' => 'The brain releases dopamine into the system when it experiences an emotionally-charged event, making it easier to remember and with greated accuracy.'],
-                'story4' => (object) ['icon' => '', 'title' => 'Cortex Activit', 'text' => 'When processing facts, two areas of the brain are activated. A well-told story can engage many additional areas, including the motor cortex, sensory cortex and frontal cortex.'],
+                'story4' => (object) ['icon' => '', 'title' => 'Cortex Activity', 'text' => 'When processing facts, two areas of the brain are activated. A well-told story can engage many additional areas, including the motor cortex, sensory cortex and frontal cortex.'],
                 'image' => (object) ['img' => 'https://wonderseedfoundation.org/wp-content/uploads/2019/03/brain-768x670.png']
             ];
             break;
@@ -170,7 +170,7 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
             $TITLE = 'board of directors';
             $BACKGROUND = '<div class="background"></div>';
             $SUBTITLE = array('board of directors', 'advisory board');
-            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
+            $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./directors.css" rel="stylesheet">';
             class Director {
                 public function __construct($name, $title, $intro) {
                     $this->name = $name;
@@ -179,10 +179,10 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
                     $this->val = 1;
                 }
                 public function person() {
-                    $dop = '<div class="wht-bar director"  onclick="showIntro(this,\'director\')">';
-                    $dop .= '<span class="director title hd4">'.$this->name.'</span>';
-                    $dop .= '<span class="director subtitle text2">'.$this->title.'</span>';
-                    $dop .= '<div id="Toggle" class="director intro text2">'.$this->intro.'</div>';
+                    $dop = '<div class="wht-bar"  onclick="showIntro(this,\'director\')">';
+                    $dop .= '<span class="person">'.$this->name.'</span>';
+                    $dop .= '<span class="person-title">'.$this->title.'</span>';
+                    $dop .= '<div id="Toggle" class="intro text-md">'.$this->intro.'</div>';
                     $dop .= '</div>';
                    echo $dop;
                 }
@@ -191,52 +191,37 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
             $director = array(
                 0 => new Director('Nina Linh','President','Founder, Chief Executive Officer and Executive Director at The WonderSeed
                 Foundation'),
-                1 => new Director('Mark Casanova','Treasurer','Executive Director at Homeless HealthCare Los Angeles'),
-                2 => new Director('Jeremy Davey','Vice President','Entrepreneur, Investor, Start up Specialist and Chief Operation Officer at The
+                new Director('Mark Casanova','Treasurer','Executive Director at Homeless HealthCare Los Angeles'),
+                new Director('Jeremy Davey','Vice President','Entrepreneur, Investor, Start up Specialist and Chief Operation Officer at The
                 WonderSeed Foundation'),
-                3 => new Director('Prinses Hemphill','Secretary','Director at Celeb Events'),
-                4 => new Director('John Canning', '','Executive Director at Digital Domain, Former Vice president of Interactive Experiences
+                new Director('Prinses Hemphill','Secretary','Director at Celeb Events'),
+                new Director('John Canning', '','Executive Director at Digital Domain, Former Vice president of Interactive Experiences
                 at NBC Universal'),
-                5 => new Director('Jeffrey Plummber', 'Chairmen','Lead Regional Vice President at Guardian Insurance'),
-                6 => new Director('Kyle Kane', '','Chief Strategy Officer at Beyond Pacific, Vice President of Artist and
+                new Director('Jeffrey Plummber', 'Chairmen','Lead Regional Vice President at Guardian Insurance'),
+                new Director('Kyle Kane', '','Chief Strategy Officer at Beyond Pacific, Vice President of Artist and
                 Repertoire at Universal Music')
             );
 
-            class Advisory {
-                public function __construct($name, $intro) {
-                    $this->name = $name;
-                    $this->intro = $intro;
-                }
-
-                public function advisory() {
-                    $dop = '<div class="wht-bar advisor"  onclick="showIntro(this, \'director\')">';
-                    $dop .= '<span class="advisory title hd4">'.$this->name.'</span>';
-                    $dop .= '<div id="Toggle" class="advisory intro text2">'.$this->intro.'</div>';
-                    $dop .= '</div>';
-                   echo $dop;
-                }
-            }
-            
             $advisory = [
-                0 => new Advisory('Chris Christian', 'Managing Partner at WNBA Dallas Wings, Grammy award winning songwriter and producer'),
-                1 => new Advisory('Taylor Weyeneth', 'Managing Director of 20k Strategies, Executive Director of End the Stigma PAC, Former Deputy Chief of Staff, Executive Office of the President-White House Drug Policy Office'),
-                2 => new Advisory('Paul Miller', 'Manager at Logic 20/20, Former program officer at Bill and Melinda Gates Foundation, Former Senior Advisor and Program Policy Development Specialist for Los Angeles Unified School District'),
-                3 => new Advisory('Congressman Mike Honda', 'U.S. House of Representatives, California 15th and 17th District'),
-                4 => new Advisory('Peter Pang', 'Managing Partner at International Law firm IPO PANG XINGPU'),
-                5 => new Advisory('Josiah Henson', 'Senior Partner at International law firm IPO PANG XUNGPU'),
-                6 => new Advisory('Ralph Winnie', 'Vice President of The Eurasia Center, Partner at International law firm IPO Pang Xing Pu'),
-                7 => new Advisory('Randall Moseley', 'Board of Director at Nadine N. Moseley Foundation'),
-                8 => new Advisory('Jason Clark', 'Celebrity Photographer'),
-                9 => new Advisory('Scott McNeely', 'Managing Partner at Dendera, Investment Banker at Jeffries & Co.'),
-                10 => new Advisory('Dr. Timo Dietrich', 'Lecturer and Professor at Griffith University, Creator of Blurred Minds Alcohol Prevention pilot programE'),
-                11 => new Advisory('Audra Lee', 'Former Executive Director of CASA, Riverside County, Former Program Director at Indian Child and Family Services'),
-                12 => new Advisory('Manny Alicandro Esq', 'Former Executive Director and Assistant General Counsel for JP Morgan Chase, Former Vice President / Associate General Counsel for Nasdaq'),
-                13 => new Advisory('Amir Rafizadeh', 'Principal at 678 Partners, Family Office Advisor'),
-                14 => new Advisory('Eric Catalan', 'Principal at Accullent'),
-                15 => new Advisory('Harry Karidis', 'Director, Producer at Karidis Productions'),
-                16 => new Advisory('Sandeep Kumar', 'Managing Partner at Global Ascent Partners, Executive Director at DiscoverSTEAM Foundation'),
-                17 => new Advisory('Jose Osuna', 'Chief Mission Officer, The Meaning Foundation, Probation Ov'),
-                18 => new Advisory('Frank Jansen', 'Senior Vice President at Chicago Title')
+                new Director('Chris Christian', null, 'Managing Partner at WNBA Dallas Wings, Grammy award winning songwriter and producer'),
+                new Director('Taylor Weyeneth', null, 'Managing Director of 20k Strategies, Executive Director of End the Stigma PAC, Former Deputy Chief of Staff, Executive Office of the President-White House Drug Policy Office'),
+                new Director('Paul Miller', null, 'Manager at Logic 20/20, Former program officer at Bill and Melinda Gates Foundation, Former Senior Advisor and Program Policy Development Specialist for Los Angeles Unified School District'),
+                new Director('Congressman Mike Honda', null, 'U.S. House of Representatives, California 15th and 17th District'),
+                new Director('Peter Pang', null, 'Managing Partner at International Law firm IPO PANG XINGPU'),
+                new Director('Josiah Henson', null, 'Senior Partner at International law firm IPO PANG XUNGPU'),
+                new Director('Ralph Winnie', null, 'Vice President of The Eurasia Center, Partner at International law firm IPO Pang Xing Pu'),
+                new Director('Randall Moseley', null, 'Board of Director at Nadine N. Moseley Foundation'),
+                new Director('Jason Clark', null, 'Celebrity Photographer'),
+                new Director('Scott McNeely', null, 'Managing Partner at Dendera, Investment Banker at Jeffries & Co.'),
+                new Director('Dr. Timo Dietrich', null, 'Lecturer and Professor at Griffith University, Creator of Blurred Minds Alcohol Prevention pilot programE'),
+                new Director('Audra Lee', null, 'Former Executive Director of CASA, Riverside County, Former Program Director at Indian Child and Family Services'),
+                new Director('Manny Alicandro Esq', null, 'Former Executive Director and Assistant General Counsel for JP Morgan Chase, Former Vice President / Associate General Counsel for Nasdaq'),
+                new Director('Amir Rafizadeh', null, 'Principal at 678 Partners, Family Office Advisor'),
+                new Director('Eric Catalan', null, 'Principal at Accullent'),
+                new Director('Harry Karidis', null, 'Director, Producer at Karidis Productions'),
+                new Director('Sandeep Kumar', null, 'Managing Partner at Global Ascent Partners, Executive Director at DiscoverSTEAM Foundation'),
+                new Director('Jose Osuna', null, 'Chief Mission Officer, The Meaning Foundation, Probation Ov'),
+                new Director('Frank Jansen', null, 'Senior Vice President at Chicago Title')
             ];
             break;
         case 'who-we-are':

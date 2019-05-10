@@ -1,6 +1,7 @@
 /* styling contact us page */
 .box-wrapper {
   padding: 0 15px;
+  align-items: flex-start;
 }
 .contact .col-rt, .contact .col-lt {
   width: 100%;
@@ -50,10 +51,10 @@ i.fas {
 
 @media (min-width: 769px) {
   .contact .col-lt {
-    max-width: 35%
+    max-width: 45%
   }
 
   .contact .col-rt {
-    max-width: 65%;
+    max-width: 55%;
   }
 }

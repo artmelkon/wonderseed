@@ -3,6 +3,11 @@
   margin: 0 auto;
 }
 
+.right-choice.box-wrapper {
+  align-items: flex-start;
+  padding-bottom: 30px;
+}
+
 .right-choice-box::before {
   background-image: url(../img/choose-the-right-direction.gif);
   content: "";
@@ -30,10 +35,9 @@
 
   .right-choice {
    align-items: top !important;
-   border: 2px solid red;
   }
+  
   .right-choice .box-column-wrapper {
     width: 250px;
-    border: 2px solid red;
   }
 }

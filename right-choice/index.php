@@ -18,8 +18,8 @@ ob_start();
         </div>
     </div>
 </section>
-<section style="background-color: #6EA1B1">
-    <div class="am-padding30 center">
+<section class="am-padding30" style="background-color: #6EA1B1">
+    <div class="center">
         <h1 class="title uppercase f2x"><?php echo $SUBTITLE[1]; ?></h1>
     </div>
    <div class="right-choice container box-wrapper row">
