@@ -22,11 +22,11 @@ ob_start();
     <div class="box-wrapper" style="width: 780px; margin: 64px auto;">
     <?php
         for ($i = 0; $i < count($SLIDER_BOX); $i++) { ?>
-            <div class="box-column-wrapper wht-border am-brd-radius8" style="background-color: #<?php echo $SLIDER_BOX[$i]['bgcolor']; ?>; max-width: 350px; height: 235px; margin-top: 25px;">
+            <div class="box-column-wrapper wht-border am-brd-radius8" style="background-image: linear-gradient(<?php echo $SLIDER_BOX[$i]['bgcolor']; ?>); max-width: 350px; height: 235px; margin-top: 25px;">
                 <div class="icon"></div>
                 <h3 class="center"><?php echo $SLIDER_BOX[$i]['title']; ?></h3>
                 <p class="center text-md"><?php echo $SLIDER_BOX[$i]['text']; ?></p>
-                <div class="btn"><a href="<?php echo $SUBTITLE[$I]['url'] ?>">Learn More</a></div>
+                <div class="btn"><a href="<?php echo $SUBTITLE[$I]['url']; ?>">Learn More</a></div>
             </div>
     <?php } ?>
     </div>

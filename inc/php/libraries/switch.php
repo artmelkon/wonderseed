@@ -241,7 +241,7 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
                 ['4E System', 'Our program is based on our socio-emotional']
             ];
             $SLIDER_BOX = [
-                ['title'=>'The Power of Storytelling', 'text'=>'improve narrative recall and problem solving increase literacy and boost linguistic abilities facilitate abstract thinking develop self regulation and self awareness', 'url'=>'#', 'bgcolor'=>'017BC5'], ['title'=>'Technology', 'text'=>'We speak the language that our children understand through Virtual Reality and Gamification','#', 'bgcolor'=>'6ACA6B']
+                ['title'=>'The Power of Storytelling', 'text'=>'improve narrative recall and problem solving increase literacy and boost linguistic abilities facilitate abstract thinking develop self regulation and self awareness', 'url'=>'#', 'bgcolor'=>'#FD6721, #B03901, #FD6721'], ['title'=>'Technology', 'text'=>'We speak the language that our children understand through Virtual Reality and Gamification','#', 'bgcolor'=>'#6ACA6B, #318B32, #6ACA6B']
             ];
 
             class Box {
