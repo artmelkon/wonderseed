@@ -5,7 +5,6 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
         case 'gamification';
             $PAGE_TITLE = 'Gamification of Education';
             $TITLE = 'Gamification of Education';
-            $BACKGROUND = '<div class="background"></div>';
             $SECTION_BGIMG = '../img/virtual-reality-1920.jpg';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./css/gamification.css" rel="stylesheet">';
             $PARAGRAPH = (object) [
@@ -64,7 +63,6 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
             $PAGE_TITLE ='The Right Choice Campaign';
             $TITLE = 'the right choice campaine';
             $SUBTITLE = ['Helping Kids Make The Right Choice', 'how it works'];
-            $BACKGROUND = '<div class="background"></div>';
             $SECTION_BGIMG = '../img/target-1920x640.jpg';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./right-choice.css" rel="stylesheet">';
             $PARAGRAPH = '<p style="color: #FBDC2D;">“The Right Choice Campaign is an innovative Strength Based Drug Prevention program intended to build and promote Critical Thinking in our children.
@@ -77,7 +75,6 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
             $PAGE_TITLE = 'Storytelling';
             $TITLE = 'The Power of Storytelling';
             $SUBTITLE = 'How The Power of Storytelling Works';
-            $BACKGROUND = '<div class="background"></div>';
             $SECTION_BGIMG = '../img/library-1920.jpg';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link rel="stylesheet" href="./storytelling.css">';
             $IMG_PATH = '../img/library-1920.jpg';
@@ -108,7 +105,6 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
             $TITLE = 'contact us';
             $SUBTITLE= array('contact information','basic information');
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./contact.css" rel="stylesheet">';
-            $BACKGROUND = '<div class="background"></div>';
             $ADDRESS = [
                 '<i class="fas fa-home fa-lg"></i></span><spa>15225 Dickens St #3 Sherman Oaks, CA. 91403',
                 '<i class="fas fa-mobile-alt fa-lg"></i>(213) 340-4899',
@@ -120,7 +116,6 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
             $TITLE = 'support us';
             $SUBTITLE = 'help shape the future';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link rel="stylesheet" href="./css/donate.css">';
-            $BACKGROUND = '<div class="background"></div>';
             class Box {
                 public function __construct($icon, $title, $item, $url, $btn) {
                     $this->icon = $icon;
@@ -155,7 +150,6 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
             $INFO_TEXT = 'It is the capacity to be aware of, control, and express one’s emotions and to handle interpersonal relationships judiciously and empathetically.';
             $SUBTITLE = array('Self Awareness', 'Critical Thinking', 'Social Awareness', 'Self Regulation');
             $BRAIN_IMG = '../img/brain-white-yellow-grid.png';
-            $BACKGROUND = '<div class="background"></div>';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css">';
             break;
         case 'our-team':
@@ -163,12 +157,10 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
             $TITLE = 'our team';
             $INFO_TEXT = '';
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./team.css" rel="stylesheet">';
-            $BACKGROUND = '<div class="background"></div>';
             break;
         case 'board-of-directors':
             $PAGE_TITLE = 'Board of Directors';
             $TITLE = 'board of directors';
-            $BACKGROUND = '<div class="background"></div>';
             $SUBTITLE = array('board of directors', 'advisory board');
             $CSS_PATH = '<link rel="stylesheet" href="../inc/css/background.css"><link href="./directors.css" rel="stylesheet">';
             class Director {
@@ -242,7 +234,6 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
             $PAGE_TITLE = 'Home';
             $TITLE = 'the wonderseed foundation';
             $INFO_TEXT = '“Children are our most valuable resource and its best hope for the future” &nbsp;&nbsp;&lt;i&gt;-John&nbsp;F.&nbsp;Kennedy&lt;/i&gt;';
-            $BACKGROUND = '<div id="particles-js"></div>';
             $SECTION_BGIMG = ['./img/intelligence.jpg','./img/idea.jpg'];
             $CSS_PATH = '<link rel="stylesheet" href="./inc/css/particles.css">';
             $SUBTITLE = [
@@ -262,10 +253,10 @@ $uriPage = basename($_SERVER['REQUEST_URI']);
                 }
 
                 public function makeBox() {
-                    $dop = '<div class="box-column-wrapper brd-radius-8 wht-border" style="width:'.$this->width.';">';
+                    $dop = '<div class="box-column-wrapper" style="width:'.$this->width.';">';
                     $dop .= '<img src="'.$this->icon.'">';
                     $dop .= '<h3 class="title capitalize center">'.$this->title.'</h3>';
-                    $dop .= '<ul style="list-style-type: initial !important;">';
+                    $dop .= '<ul s brd-radius-8 wht-bordertyle="list-style-type: initial !important;">';
                     foreach($this->list as $val) {
                         $dop .= '<li class="text-md capitalize" style="line-height: 1.5em;margin-left:25px;">'.$val.'</li>';
                     }

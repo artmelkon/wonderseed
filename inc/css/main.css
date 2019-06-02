@@ -24,11 +24,12 @@ body {
 .container {
   margin: 25px auto;
   padding: 0 15px;
+  border: 2px solid red;
 }
 
 img {
+  display: block;
   width: 100%;
-  vertical-align: middle;
 }
 
 p {
@@ -36,8 +37,9 @@ p {
 }
 
 .f2x {
-  font-size: 2em;
+  font-size: 2.25em;
 }
+
 
 header {
   margin: 150px 0 -30px 0;
@@ -63,12 +65,12 @@ a {
 }
 
 .text-md {
-  font-size: 0.8em;
+  font-size: 0.875em;
   font-weight: 400;
 }
 
 .text-sm {
-  font-size: 0.6em;
+  font-size: 0.625em;
   font-weight: 400;
 }
 
@@ -85,6 +87,10 @@ a {
 
 .am-padding30 {
   padding: 30px 0;
+}
+
+.am-padding64 {
+  padding: 64px 0;
 }
 
 .center {
@@ -117,9 +123,6 @@ a {
   align-items: center;
 }
 
-.am-brd-radius50 {
-  border-radius: 50%;
-}
 
 .title {
   margin: 8px 0 12px 0;
@@ -236,8 +239,16 @@ img.brain {
   border: 1.5px solid #fff;
 }
 
-.brd-radius-8 {
+.am-brd-radius8 {
   border-radius: 8px;
+}
+
+.am-brd-radius50 {
+  border-radius: 50%;
+}
+
+.cols {
+  width: 100%;
 }
 
 .btn-container {
@@ -290,12 +301,9 @@ img.brain {
     width: 500px;
   }
 
-  .hd1 {
-    font-size: 3.2em;
-  }
-
-  .column50 {
+  .cols {
     width: 50%;
+    padding:0 12px;
   }
 
   .column30 {
@@ -341,8 +349,6 @@ img.brain {
   }
 
   .box-wrapper {
-    width: 960px;
-    max-width: 80%;
     justify-content: space-around;
     margin: 0 auto;
   }

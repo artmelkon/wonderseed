@@ -1,5 +1,19 @@
 /* ### modal menu styling ### */
 /* ########################## */
+nav {
+  position: absolute;
+  width: 100%;
+  display: block;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  z-index: 125;
+}
+
 .modal-nav-container {
   position: fixed;
   top: 0;
@@ -94,6 +108,13 @@
   width: 100%;
   height: auto;
   z-index: 10;
+}
+
+@media (min-width: 769px) {
+  .logo {
+    width: 80px;
+    left: 15%;
+  }
 }
 
 /* ### end of modal nav ### */
